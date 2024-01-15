@@ -1,16 +1,14 @@
 ---
+// IMPORT ASTRO LAYOUTS
+import Layout from "../layouts/Layout.astro"
 
+// IMPORT ASTRO COMPONENTS
+import HeaderBanner from "../components/home/HeaderBanner.astro"
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+	title="Saritasa - Top Custom Development Company"
+	description="Saritasa is a custom technology solutions company developing complex software systems. We build Web and Mobile Apps, CRM systems, VR experiences, and more."
+	image=""
+>
+	<HeaderBanner />
+</Layout>
