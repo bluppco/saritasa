@@ -1,0 +1,32 @@
+---
+// IMPORT ASTRO LAYOUTS
+import Container from "../../layouts/Container.astro"
+
+// IMPORT ASTRO ATOMS
+import HeadingOne from "../../atoms/heading/One.astro"
+import OrangeButton from "../../atoms/button/Orange.astro"
+import Button from "../../atoms/button/Vanilla.astro"
+---
+<section class="bg-blue-600 py-40">
+    <Container>
+        <section class="grid grid-cols-2 gap-40">
+            <section class="space-y-6">
+                <HeadingOne>Empower Your Business</HeadingOne>
+                <p class="text-white text-2xl font-avenir">We simplify complex operations, create meaningful user experiences, and deliver scalable, enduring business value. Full spectrum innovation with mobile, web, software, 3D and IoT technology solutions.</p>
+                <div class="flex gap-4">
+                    <OrangeButton>Learn More</OrangeButton>
+                    <Button>Our CEO's Message</Button>
+                </div>
+            </section>
+            <section>
+                <div class="w-full aspect-square bg-zinc-200">
+                    <img
+                        src=""
+                        alt=""
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+            </section>
+        </section>
+    </Container>
+</section>
