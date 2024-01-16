@@ -23,7 +23,8 @@ export default {
 			colors: {
 
 				"saritasa_black": "#1a3340",
-				"saritasa_primary": "#f15924"
+				"saritasa_primary": "#f15924",
+				"saritasa_teal_blue": "#0d5c7d",
 
 			}
 
