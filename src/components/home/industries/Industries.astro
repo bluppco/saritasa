@@ -1,0 +1,23 @@
+---
+import IndustriesWeServe from "./IndustriesWeServe.astro"
+---
+<section class="grid grid-cols-2 border-t border-saritasa_primary">
+    <section class="flex items-center justify-center" style=`background-image: url(${ "/videobox-bg-full-mirrored.webp" })`>
+        <div class="bg-white/70 rounded-full p-8 flex gap-4 w-fit">
+            <div class="w-20 aspect-square">
+                <img
+                    src="/play.svg"
+                    alt=""
+                    class="w-20 aspect-square"
+                />
+            </div>
+            <div>
+                <p class="text-saritasa_primary text-4xl font-avenir">About Saritasa</p>
+                <p class="text-saritasa_primary text-2xl font-avenir">Hear our CEO’s message.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <IndustriesWeServe />
+    </section>
+</section>

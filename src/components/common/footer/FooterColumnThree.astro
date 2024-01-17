@@ -1,0 +1,27 @@
+---
+// IMPORT ASTRO COMPONENTS
+import FooterTitle from "./FooterTitle.astro"
+
+const { title, data } = Astro.props
+---
+<div class="flex flex-col gap-4">
+    <FooterTitle>{ title }</FooterTitle>
+    <ul class="space-y-1">
+        {
+
+            data.map( ( item ) => {
+
+                return (
+                    <li class="font-avenir text-xs text-white">
+                        <a href={ item.data.link }>
+                            <p>{ item.data.title }</p>
+                        </a>
+                    </li>
+
+                )
+
+            })
+
+        }
+    </ul>
+</div>

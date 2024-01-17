@@ -1,0 +1,24 @@
+---
+const {
+
+    src,
+    alt,
+    href,
+    title
+
+} = Astro.props
+---
+<div>
+    <a href={ href }>
+        <div class="flex gap-4 items-center">
+            <div class="w-12 aspect-square">
+                <img
+                    src={ src }
+                    alt={ alt }
+                    class="w-12 aspect-square"
+                />
+            </div>
+            <h3 class="font-avenir text-2xl">{ title }</h3>
+        </div>
+    </a>
+</div>
