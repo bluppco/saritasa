@@ -9,6 +9,7 @@ import Hero from "../components/home/Hero.astro"
 import Services from "../components/home/services/Services.astro"
 import FeaturedProjects from "../components/home/projects/FeaturedProjects.astro"
 import InTheNews from "../components/home/news/InTheNews.astro"
+import Clients from "../components/home/clients/Clients.astro"
 import Industries from "../components/home/industries/Industries.astro"
 import ScopeMyProject from "../components/home/ScopeMyProject.astro"
 import Footer from "../components/common/footer/Footer.astro"
@@ -18,14 +19,17 @@ import Footer from "../components/common/footer/Footer.astro"
 	description="Saritasa is a custom technology solutions company developing complex software systems. We build Web and Mobile Apps, CRM systems, VR experiences, and more."
 	image=""
 >
-	<section>
+	<section class="md:h-screen md:max-h-screen">
 		<HeaderBanner />
 		<Header />
-		<Hero />
+		<section class="relative">
+			<Hero />
+			<Services />
+		</section>
 	</section>
-	<Services />
 	<FeaturedProjects />
 	<InTheNews />
+	<Clients />
 	<Industries />
 	<ScopeMyProject />
 	<Footer />

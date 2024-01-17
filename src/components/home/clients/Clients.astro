@@ -1,0 +1,13 @@
+---
+// IMPORTS ASTRO COMPONENTS
+import Testimonials from "./Testimonials"
+import ClientImages from "./ClientImages.astro"
+---
+<section>
+    <section class="grid grid-cols-3">
+        <Testimonials client:load />
+        <section class="col-span-2">
+            <ClientImages />
+        </section>
+    </section>
+</section>
