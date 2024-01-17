@@ -20,6 +20,7 @@ export default {
 				"saritasa_black": "#1a3340",
 				"saritasa_teal_blue": "#0d5c7d",
 				"saritasa_blue": "#1c7396",
+				"saritasa_dark_blue": "#033763"
 
 			}
 
