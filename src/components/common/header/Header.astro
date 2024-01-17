@@ -1,6 +1,7 @@
 ---
 const runtime = Astro.locals.runtime
 const env = runtime.env.ENVIRONMENT
+
 // IMPORT ASTRO LAYOUTS
 import Container from "../../../layouts/Container.astro"
 
@@ -59,7 +60,7 @@ header_data = header_data.sort((a, b) => a.data.order - b.data.order)
                                                                         class="text-slate-700 hover:text-saritasa_black hover:underline"
                                                                         aria-label={ "explore" + sub_item.title }
                                                                     >
-                                                                        <div class="text-sm font-light capitalize tracking-wide text-t font-barlow_normal">{ sub_item.title }</div>
+                                                                        <div class="text-sm font-light capitalize tracking-wide text-t font-avenir">{ sub_item.title }</div>
                                                                     </a>
                                                                 </div>
                                                             )
