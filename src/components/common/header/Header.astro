@@ -1,4 +1,6 @@
 ---
+const runtime = Astro.locals.runtime
+const env = runtime.env.ENVIRONMENT
 // IMPORT ASTRO LAYOUTS
 import Container from "../../../layouts/Container.astro"
 
@@ -14,7 +16,7 @@ import { getCollection } from "astro:content"
 let header_data = await getCollection("header")
 header_data = header_data.sort((a, b) => a.data.order - b.data.order)
 ---
-<header class="h-24 hidden md:flex items-center fixed top-0 z-50 w-full bg-white">
+<header class={`h-24 hidden md:flex items-center fixed top-0 z-50 w-full bg-white ${ env === "staging" ? "mt-8" : "" }`}>
     <Container>
         <nav class="flex items-center justify-between">
             <a href="/" aria-label="logo">

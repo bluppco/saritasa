@@ -9,11 +9,11 @@ const {
 } = Astro.props
 ---
 <div>
-    <div class="w-20 aspect-video">
+    <div class="w-full h-8">
         <img
             src={ src }
             alt={ alt }
-            class="w-full h-full"
+            class="w-full h-full object-contain object-left"
         />
     </div>
     <a href={ href } target="_blank">

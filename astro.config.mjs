@@ -9,5 +9,10 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [mdx(), tailwind(), react()],
   output: "server",
-  adapter: cloudflare()
+  adapter: cloudflare({
+    runtime: {
+      mode: 'local',
+      type: 'pages'
+    }
+  })
 });
