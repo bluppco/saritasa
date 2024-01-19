@@ -1,4 +1,11 @@
 ---
+import { homeAPI } from "../api/home/index"
+
+const runtime = Astro.locals.runtime;
+const data = await homeAPI( runtime.env.ENVIRONMENT )
+
+const { home_data, services, projects, highlights, industries, news, testimonials, meta_tags } = data
+
 // IMPORT ASTRO LAYOUTS
 import Layout from "../layouts/Layout.astro"
 
@@ -23,14 +30,14 @@ import Footer from "../components/common/footer/Footer.astro"
 		<HeaderBanner />
 		<Header />
 		<section class="relative">
-			<Hero />
-			<Services />
+			<Hero data={ home_data.hero } />
+			<Services data={ home_data.services } services={ services }  />
 		</section>
 	</section>
-	<FeaturedProjects />
-	<InTheNews />
+	<FeaturedProjects data={ home_data.projects } projects={ projects } />
+	<InTheNews data={ home_data.in_the_news } news={ news } />
 	<Clients />
-	<Industries />
-	<ScopeMyProject />
+	<Industries data={ home_data.industries_we_serve } industries={ industries } />
+	<ScopeMyProject data={ home_data.scope_my_project } />
 	<Footer />
 </Layout>

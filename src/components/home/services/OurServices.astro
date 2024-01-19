@@ -2,11 +2,13 @@
 // IMPORT ASTRO ATOMS
 import HeadingTwoWhite from "../../../atoms/heading/TwoWhite.astro"
 import ButtonWhite from "../../../atoms/button/White.astro"
+
+const { data } = Astro.props
 ---
 <div class="bg-saritasa_teal_blue p-10 rounded-3xl shadow-xl space-y-4">
     <div class="space-y-6">
-        <HeadingTwoWhite>Our Services</HeadingTwoWhite>
-        <p class="text-2xl font-avenir text-white">We leverage advanced technology to deliver solutions that exceed expectations.</p>
+        <HeadingTwoWhite>{ data.title }</HeadingTwoWhite>
+        <p class="text-2xl font-avenir text-white">{ data.description }</p>
     </div>
-    <ButtonWhite>Learn More</ButtonWhite>
+    <ButtonWhite>{ data.button_one_text }</ButtonWhite>
 </div>

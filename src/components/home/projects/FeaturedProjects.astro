@@ -5,25 +5,19 @@ import HeadingTwoCenter from "../../../atoms/heading/TwoCenter.astro"
 // IMPORT ASTRO COMPONENTS
 import ProjectItem from "./ProjectItem.astro"
 
-const data = Array(4).fill({
-
-    src: "/Loadstar_featured.png",
-    title: "Loadstar Product Handling VR Training",
-    category: "AR / VR"
-
-})
+const { data, projects } = Astro.props
 ---
 <section class="pt-96 space-y-8">
-    <HeadingTwoCenter>Featured Projects</HeadingTwoCenter>
+    <HeadingTwoCenter>{ data.title }</HeadingTwoCenter>
     <div class="grid grid-cols-4">
         {
 
-            data.map( ( value ) => {
+            projects.map( ( value ) => {
 
                 return(
                     <ProjectItem
-                        src={ value.src }
-                        alt={ value.alt }
+                        src={ value.cover }
+                        alt={ value.title }
                         title={ value.title }
                         category={ value.category }
                     />

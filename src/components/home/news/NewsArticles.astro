@@ -2,13 +2,7 @@
 // IMPORT ASTRO COMPONENTS
 import NewsArticleItem from "./NewsArticleItem.astro"
 
-const data = Array(6).fill({
-
-    src: "/forbes.png",
-    title: "15 Ways Tech Leaders Can Help Their Teams Manage Work Loads And Stress",
-    href: "https://www.forbes.com/sites/forbestechcouncil/2022/03/25/15-ways-tech-leaders-can-help-their-teams-manage-work-loads-and-stress/?sh=5ae27a947150"
-
-})
+const { data } = Astro.props
 ---
 <div class="grid grid-cols-2 gap-x-14 gap-y-8 p-10 bg-white rounded-3xl shadow-xl">
     {
@@ -17,9 +11,9 @@ const data = Array(6).fill({
 
             return(
                 <NewsArticleItem
-                    src={ value.src }
-                    alt={ value.alt }
-                    href={ value.href }
+                    src={ value.cover }
+                    alt={ value.title }
+                    href=""
                     title={ value.title }
                 />
             )

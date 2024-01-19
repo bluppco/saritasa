@@ -6,22 +6,27 @@ import Container from "../../layouts/Container.astro"
 import HeadingOne from "../../atoms/heading/One.astro"
 import OrangeButton from "../../atoms/button/Orange.astro"
 import Button from "../../atoms/button/Vanilla.astro"
+
+// IMPORTS CONSTANTS
+import { CDN_LINK, IMAGE_QUALITY } from "../../constants/cdn"
+
+const { data } = Astro.props
 ---
 <section class="bg-saritasa_dark_blue h-screen py-52">
     <Container>
         <section class="grid grid-cols-2 gap-40">
             <section class="space-y-6">
-                <HeadingOne>Empower Your Business</HeadingOne>
-                <p class="text-white text-2xl font-avenir">We simplify complex operations, create meaningful user experiences, and deliver scalable, enduring business value. Full spectrum innovation with mobile, web, software, 3D and IoT technology solutions.</p>
+                <HeadingOne>{ data.title }</HeadingOne>
+                <p class="text-white text-2xl font-avenir">{ data.description }</p>
                 <div class="flex gap-4">
-                    <OrangeButton>Learn More</OrangeButton>
-                    <Button>Our CEO's Message</Button>
+                    <OrangeButton>{ data.button_one_text }</OrangeButton>
+                    <Button>{ data.button_two_text }</Button>
                 </div>
             </section>
             <section>
                 <div class="w-[480px] aspect-square">
                     <img
-                        src="/hero-image.svg"
+                        src={ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY }
                         alt=""
                         class="w-full h-full object-contain"
                     />

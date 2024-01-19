@@ -2,14 +2,10 @@
 // IMPORT ASTRO ATOMS
 import HeadingTwoBlue from "../../../atoms/heading/TwoBlue.astro"
 
-const data = Array(10).fill({
-
-    title: "Medical/Pharma"
-
-})
+const { data, title } = Astro.props
 ---
 <section class="space-y-6 py-20 px-32">
-    <HeadingTwoBlue>Industries We Serve:</HeadingTwoBlue>
+    <HeadingTwoBlue>{ title }</HeadingTwoBlue>
     <div class="grid grid-cols-2 gap-2">
         {
 
@@ -17,7 +13,7 @@ const data = Array(10).fill({
 
                 return(
                     <div class="hover:shadow-2xl hover:bg-white p-2 cursor-pointer">
-                        <p class="text-2xl font-avenir">-  { value.title }</p>
+                        <p class="text-2xl font-avenir">-  { value.name }</p>
                     </div>
                 )
 

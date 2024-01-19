@@ -4,33 +4,26 @@ import Container from "../../../layouts/Container.astro"
 import ServiceItem from "./ServiceItem.astro"
 import OurServices from "./OurServices.astro"
 
-const data = Array(8).fill({
-
-    src: "/mobile-icon.svg",
-    alt: "",
-    href: "",
-    title: "Mobile Development"
-
-})
+const { data, services } = Astro.props
 ---
 <section class="absolute -bottom-72 flex justify-center w-full">
     <Container>
         <section class="grid grid-cols-3 gap-6">
             <section>
-                <OurServices />
+                <OurServices data={ data } />
             </section>
             <section class="col-span-2">
                 <div class="grid grid-cols-2 gap-10 p-10 bg-white rounded-3xl shadow-xl">
                     {
 
-                        data.map( ( value ) => {
+                        services.map( ( value ) => {
 
                             return(
                                 <ServiceItem
-                                    src={ value.src }
-                                    alt={ value.alt }
-                                    href={ value.href }
-                                    title={ value.title }
+                                    src={ value.cover }
+                                    alt={ value.name }
+                                    href=""
+                                    title={ value.name }
                                 />
                             )
 
