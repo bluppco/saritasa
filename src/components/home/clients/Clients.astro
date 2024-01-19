@@ -4,7 +4,7 @@ import Testimonials from "./Testimonials"
 import ClientImages from "./ClientImages.astro"
 import Highlights from "./Highlights.astro"
 
-const { testimonials, clients } = Astro.props
+const { testimonials, clients, highlights } = Astro.props
 ---
 <section class="relative h-full">
     <section class="grid grid-cols-3 h-full">
@@ -16,5 +16,5 @@ const { testimonials, clients } = Astro.props
             <ClientImages data={ clients } />
         </section>
     </section>
-    <Highlights />
+    <Highlights data={ highlights } />
 </section>

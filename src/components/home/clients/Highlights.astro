@@ -1,16 +1,11 @@
 ---
+// IMPORTS ASTRO LAYOUTS
+import Container from "../../../layouts/Container.astro"
+
 // IMPORTS ASTRO COMPONENTS
-import Container from "../../../layouts/Container.astro";
-import Highlightsitem from "./Highlightsitem.astro"
+import Highlightsitem from "./Highlightsitem.jsx"
 
-const data = Array(4).fill({
-
-    title: "Successful Projects",
-    statistics: "1769",
-    src: "",
-    alt: ""
-
-})
+const { data } = Astro.props
 ---
 <section class="absolute -bottom-44 w-full">
     <Container>
@@ -23,8 +18,9 @@ const data = Array(4).fill({
                         <Highlightsitem
                             title={ value.title }
                             statistics={ value.statistics }
-                            src={ value.src }
-                            alt={ value.alt }
+                            src={ value.cover }
+                            alt={ value.title }
+                            client:load
                         />
                     )
 
