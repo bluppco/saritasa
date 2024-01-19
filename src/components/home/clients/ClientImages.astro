@@ -1,7 +1,27 @@
 ---
+// IMPORTS ASTRO LAYOUTS
+import { CDN_LINK, IMAGE_QUALITY } from "../../../constants/cdn"
+
 // IMPORTS ASTRO COMPONENTS
 import ClientImageItem from "./ClientImageItem.astro"
+
+const { data } = Astro.props
+
+const images = data.images.sort(( a,b ) => a.order - b.order )
 ---
-<section class="grid grid-cols-3 gap-10 bg-black p-20">
-    <ClientImageItem />
+<section class="grid grid-cols-3 gap-x-10 gap-y-20 bg-black p-20" style=`background-image: url(${ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY })`>
+    {
+
+        images.map( ( value ) => {
+
+            return(
+                <ClientImageItem
+                    src={ CDN_LINK + value.file + "?quality=" + IMAGE_QUALITY }
+                    alt=""
+                />
+            )
+
+        })
+
+    }
 </section>

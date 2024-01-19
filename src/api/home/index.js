@@ -18,7 +18,8 @@ export const homeAPI = async ( environment ) => {
         projects : "",
         in_the_news : "",
         industries_we_serve : "",
-        scope_my_project : ""
+        scope_my_project : "",
+        clients : ""
 
     }
     home.map( ( data ) => {
@@ -35,6 +36,8 @@ export const homeAPI = async ( environment ) => {
             home_data.industries_we_serve = data
         else if ( data.slug === "scope-my-project" )
             home_data.scope_my_project = data
+        else if ( data.slug === "clients" )
+            home_data.clients = data
 
     })
 
