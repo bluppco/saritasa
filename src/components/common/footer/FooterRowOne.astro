@@ -33,13 +33,17 @@ import { frontmatter as footerColumnTwo } from "../../../content/footer-titles/t
 import { frontmatter as footerColumnThree } from "../../../content/footer-titles/title-three.md"
 import { frontmatter as footerColumnFour } from "../../../content/footer-titles/title-four.md"
 ---
-<section class="bg-black py-10">
+<section class="bg-saritasa_dark_gray py-10">
     <Container>
-    <section class="grid grid-cols-1 md:grid-cols-5 gap-10">
-        <FooterColumnOne title={ footerColumnOne.title } data={ footer_column_one } />
-        <FooterColumnTwo title={ footerColumnTwo.title } data={ footer_column_two } />
-        <FooterColumnThree title={ footerColumnThree.title } data={ footer_column_three } />
-        <FooterColumnFour title={ footerColumnFour.title } data={ footer_column_four } />
+    <section class="flex justify-between">
+        <section class="grid md:grid-cols-2 gap-4 md:gap-20">
+            <FooterColumnOne title={ footerColumnOne.title } data={ footer_column_one } />
+            <FooterColumnTwo title={ footerColumnTwo.title } data={ footer_column_two } />
+        </section>
+        <section class="grid md:grid-cols-2 gap-4 md:gap-20">
+            <FooterColumnThree title={ footerColumnThree.title } data={ footer_column_three } />
+            <FooterColumnFour title={ footerColumnFour.title } data={ footer_column_four } />
+        </section>
         <FooterColumnFive />
     </section>
 </Container>

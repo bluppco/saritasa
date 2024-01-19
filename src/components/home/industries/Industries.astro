@@ -1,8 +1,14 @@
 ---
+// IMPORTS CONSTANTS
+import { CDN_LINK, IMAGE_QUALITY } from "../../../constants/cdn"
+
+// IMPORTS ASTRO COMPONENTS
 import IndustriesWeServe from "./IndustriesWeServe.astro"
+
+const { data, industries } = Astro.props
 ---
-<section class="grid grid-cols-2 border-t border-saritasa_primary">
-    <section class="flex items-center justify-center" style=`background-image: url(${ "/videobox-bg-full-mirrored.webp" })`>
+<section class="grid grid-cols-2 border-t border-saritasa_primary mt-60">
+    <section class="flex items-center justify-center bg-zinc-200" style=`background-image: url(${ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY })`>
         <div class="bg-white/70 rounded-full p-8 flex gap-4 w-fit">
             <div class="w-20 aspect-square">
                 <img
@@ -12,12 +18,12 @@ import IndustriesWeServe from "./IndustriesWeServe.astro"
                 />
             </div>
             <div>
-                <p class="text-saritasa_primary text-4xl font-avenir">About Saritasa</p>
-                <p class="text-saritasa_primary text-2xl font-avenir">Hear our CEO’s message.</p>
+                <p class="text-saritasa_primary text-4xl font-avenir">{ data.title }</p>
+                <p class="text-saritasa_primary text-2xl font-avenir">{ data.description }</p>
             </div>
         </div>
     </section>
     <section>
-        <IndustriesWeServe />
+        <IndustriesWeServe data={ industries } title={ data.section } />
     </section>
 </section>

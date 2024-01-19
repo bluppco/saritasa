@@ -1,4 +1,7 @@
 ---
+// IMPORTS CONSTANTS
+import { CDN_LINK, IMAGE_QUALITY } from "../../../constants/cdn"
+
 const {
 
     src,
@@ -9,18 +12,28 @@ const {
 } = Astro.props
 ---
 <div class="relative group cursor-pointer">
-    <div class="w-full aspect-square">
+    <div class="w-full aspect-square bg-zinc-200">
         <img
-            src={ src }
+            src={ CDN_LINK + src + "?quality=" + IMAGE_QUALITY }
             alt={ alt }
             class="w-full h-full"
         />
     </div>
     <div class="flex items-center justify-center w-full h-full absolute top-0">
-        <div class="hidden group-hover:block space-y-6 p-10 z-10">
+        <div class="hidden group-hover:block space-y-6 h-full w-full p-10 relative z-10 group-hover:border group-hover:border-saritasa_primary">
             <p class="text-4xl text-white font-semibold font-avenir">{ title }</p>
-            <p class="text-xl text-white font-semibold font-avenir">{ category }</p>
+            {
+
+                category.map( ( value ) => {
+
+                    return(
+                        <p class="text-xl text-white font-semibold font-avenir">{ value }</p>
+                    )
+
+                })
+
+            }
         </div>
     </div>
-    <div class="hidden group-hover:block bg-black/20 w-full h-full absolute top-0"></div>
+    <div class="hidden group-hover:block bg-cyan-300/10 w-full h-full absolute top-0"></div>
 </div>

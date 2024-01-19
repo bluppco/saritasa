@@ -1,6 +1,11 @@
 ---
 // IMPORT ASTRO ATOMS
 import HeadingThreeOrangeCenter from "../../../atoms/heading/ThreeOrangeCenter.astro"
+
+// IMPORTS CONSTANTS
+import { CDN_LINK, IMAGE_QUALITY } from "../../../constants/cdn"
+
+const { data } = Astro.props
 ---
 <div class="space-y-4">
     <div class="flex items-center gap-2">
@@ -15,12 +20,12 @@ import HeadingThreeOrangeCenter from "../../../atoms/heading/ThreeOrangeCenter.a
         <div class="bg-saritasa_primary h-[1px] w-full"></div>
     </div>
     <div class="px-4">
-        <HeadingThreeOrangeCenter>#1 Ranked Development Firm</HeadingThreeOrangeCenter>
+        <HeadingThreeOrangeCenter>{ data.title }</HeadingThreeOrangeCenter>
     </div>
-    <p class="text-saritasa_black font-avenir text-2xl text-center leading-normal">Clutch Leader & Inc. Power Partner for Custom Software Development</p>
+    <p class="text-saritasa_black font-avenir text-2xl text-center leading-normal">{ data.description }</p>
     <div class="w-full aspect-[4/1] px-20">
         <img
-            src="/clutch-reviews.png"
+            src={ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY }
             alt=""
             class="w-full h-full"
         />

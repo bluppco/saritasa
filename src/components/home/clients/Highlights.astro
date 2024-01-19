@@ -1,0 +1,32 @@
+---
+// IMPORTS ASTRO LAYOUTS
+import Container from "../../../layouts/Container.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import Highlightsitem from "./Highlightsitem.jsx"
+
+const { data } = Astro.props
+---
+<section class="absolute -bottom-44 w-full">
+    <Container>
+        <section class="flex justify-between bg-white rounded-2xl shadow px-24 py-10">
+            {
+
+                data.map( ( value ) => {
+
+                    return(
+                        <Highlightsitem
+                            title={ value.title }
+                            statistics={ value.statistics }
+                            src={ value.cover }
+                            alt={ value.title }
+                            client:load
+                        />
+                    )
+
+                })
+
+            }
+        </section>
+    </Container>
+</section>

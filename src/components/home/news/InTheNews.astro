@@ -8,16 +8,18 @@ import HeadingTwoCenter from "../../../atoms/heading/TwoCenter.astro"
 // IMPORT ASTRO COMPONENTS
 import NewsArticles from "./NewsArticles.astro"
 import ClutchRanking from "./ClutchRanking.astro"
+
+const { data, news } = Astro.props
 ---
 <Container>
-    <section class="space-y-8 py-20">
-        <HeadingTwoCenter>In The News</HeadingTwoCenter>
+    <section class="space-y-8 py-16">
+        <HeadingTwoCenter>{ data.section }</HeadingTwoCenter>
         <section class="grid grid-cols-3 gap-6">
             <section>
-                <ClutchRanking />
+                <ClutchRanking data={ data } />
             </section>
             <section class="col-span-2">
-                <NewsArticles />
+                <NewsArticles data={ news } />
             </section>
         </section>
     </section>

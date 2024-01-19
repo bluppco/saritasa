@@ -1,6 +1,7 @@
 ---
 const runtime = Astro.locals.runtime
 const env = runtime.env.ENVIRONMENT
+
 // IMPORT ASTRO LAYOUTS
 import Container from "../../../layouts/Container.astro"
 
@@ -16,15 +17,15 @@ import { getCollection } from "astro:content"
 let header_data = await getCollection("header")
 header_data = header_data.sort((a, b) => a.data.order - b.data.order)
 ---
-<header class={`h-24 hidden md:flex items-center fixed top-0 z-50 w-full bg-white ${ env === "staging" ? "mt-8" : "" }`}>
+<header class={`h-24 hidden md:flex items-center fixed top-0 z-50 w-full bg-white ${ env === "staging" ? "mt-10" : "" }`}>
     <Container>
         <nav class="flex items-center justify-between">
             <a href="/" aria-label="logo">
-                <div class="w-56 aspect-video">
+                <div class="w-56 aspect-[4/1]">
                     <img
                         src="/logo/saritasa-logo.svg"
                         alt="Saritasa logo"
-                        class="w-56 aspect-video"
+                        class="w-56 aspect-[4/1]"
                     />
                 </div>
             </a>
@@ -36,6 +37,7 @@ header_data = header_data.sort((a, b) => a.data.order - b.data.order)
 
                             return (
                                 <li class="text-base text-slate-500 font-avenir font-semibold uppercase flex items-center gap-2 relative group cursor-pointer">
+                                    <div class="w-0 bg-saritasa_primary group-hover:w-full h-[2px] transition-width duration-100 ease-in"></div>
                                     <a href={ "/" + item.data.slug } class="group-hover:text-saritasa_black" aria-label={"explore " + item.data.title }>{ item.data.title }</a>
                                     {
 
@@ -43,7 +45,7 @@ header_data = header_data.sort((a, b) => a.data.order - b.data.order)
                                         <div>
                                             <img
                                                 src="/icons/arrow_down.svg"
-                                                class="w-2 h-2"
+                                                class="w-3 aspect-square"
                                                 alt="dropdown menu icon"
                                             />
                                             <div class="hidden group-hover:block group-hover:flex-col absolute p-6 bg-white left-0 z-20 top-7 w-96 gap-2 shadow">
@@ -59,7 +61,7 @@ header_data = header_data.sort((a, b) => a.data.order - b.data.order)
                                                                         class="text-slate-700 hover:text-saritasa_black hover:underline"
                                                                         aria-label={ "explore" + sub_item.title }
                                                                     >
-                                                                        <div class="text-sm font-light capitalize tracking-wide text-t font-barlow_normal">{ sub_item.title }</div>
+                                                                        <div class="text-sm font-light capitalize tracking-wide text-t font-avenir">{ sub_item.title }</div>
                                                                     </a>
                                                                 </div>
                                                             )

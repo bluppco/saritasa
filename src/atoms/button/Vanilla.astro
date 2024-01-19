@@ -1,9 +1,16 @@
 ---
 const { href } = Astro.props
 ---
-<div class="hover:mb-4 transition-all duration-300">
+<div class="hover:mb-10 transition-all duration-300">
     <a href={ href }>
-        <button class="h-12 px-8 flex items-center justify-center text-white border-2 border-white bg-transparent rounded-full text-lg font-semibold font-avenir hover:shadow-2xl">
+        <button class="h-12 px-6 flex gap-3 items-center justify-center text-white border-2 border-white bg-transparent rounded-full text-lg font-semibold font-avenir hover:shadow-2xl">
+            <div class="w-6 aspect-square">
+                <img
+                    src="/icons/play.svg"
+                    alt=""
+                    class="w-6 aspect-square"
+                />
+            </div>
             <slot/>
         </button>
     </a>

@@ -16,3 +16,10 @@
     font-style: normal;
     src: url('/fonts/Avenir-Heavy.woff2') format('woff2');
 }
+
+.control-dots{
+    bottom: -16px !important;
+}
+.carousel.carousel-slider{
+    overflow: inherit !important;
+}
