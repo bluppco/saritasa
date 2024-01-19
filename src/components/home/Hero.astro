@@ -12,9 +12,9 @@ import { CDN_LINK, IMAGE_QUALITY } from "../../constants/cdn"
 
 const { data } = Astro.props
 ---
-<section class="bg-saritasa_dark_blue h-screen py-52">
+<section class="bg-saritasa_dark_blue h-screen py-60">
     <Container>
-        <section class="grid grid-cols-2 gap-40">
+        <section class="grid grid-cols-2 gap-10">
             <section class="space-y-6">
                 <HeadingOne>{ data.title }</HeadingOne>
                 <p class="text-white text-2xl font-avenir">{ data.description }</p>
@@ -23,7 +23,7 @@ const { data } = Astro.props
                     <Button>{ data.button_two_text }</Button>
                 </div>
             </section>
-            <section>
+            <section class="flex justify-end">
                 <div class="w-[480px] aspect-square">
                     <img
                         src={ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY }

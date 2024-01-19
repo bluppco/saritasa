@@ -4,15 +4,15 @@ import HeadingTwoBlue from "../../../atoms/heading/TwoBlue.astro"
 
 const { data, title } = Astro.props
 ---
-<section class="space-y-6 py-20 px-32">
+<section class="space-y-6 py-20 px-32 bg-white">
     <HeadingTwoBlue>{ title }</HeadingTwoBlue>
-    <div class="grid grid-cols-2 gap-2">
+    <div class="grid grid-cols-2 gap-x-10">
         {
 
             data.map( ( value ) => {
 
                 return(
-                    <div class="hover:shadow-2xl hover:bg-white p-2 cursor-pointer">
+                    <div class="hover:shadow-2xl hover:shadow-zinc-200 hover:bg-white p-2 cursor-pointer">
                         <p class="text-2xl font-avenir">-  { value.name }</p>
                     </div>
                 )

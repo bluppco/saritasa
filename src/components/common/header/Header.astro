@@ -17,15 +17,15 @@ import { getCollection } from "astro:content"
 let header_data = await getCollection("header")
 header_data = header_data.sort((a, b) => a.data.order - b.data.order)
 ---
-<header class={`h-24 hidden md:flex items-center fixed top-0 z-50 w-full bg-white ${ env === "staging" ? "mt-8" : "" }`}>
+<header class={`h-24 hidden md:flex items-center fixed top-0 z-50 w-full bg-white ${ env === "staging" ? "mt-10" : "" }`}>
     <Container>
         <nav class="flex items-center justify-between">
             <a href="/" aria-label="logo">
-                <div class="w-56 aspect-video">
+                <div class="w-56 aspect-[4/1]">
                     <img
                         src="/logo/saritasa-logo.svg"
                         alt="Saritasa logo"
-                        class="w-56 aspect-video"
+                        class="w-56 aspect-[4/1]"
                     />
                 </div>
             </a>

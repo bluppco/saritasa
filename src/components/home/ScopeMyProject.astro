@@ -8,7 +8,7 @@ import { CDN_LINK, IMAGE_QUALITY } from "../../constants/cdn"
 
 const { data } = Astro.props
 ---
-<section class="h-[420px] bg-zinc-200 flex flex-col gap-8 items-center justify-center pt-32" style=`background-image: url(${ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY })`>
+<section class="h-[420px] flex flex-col gap-8 items-center justify-center pt-32" style=`background-image: url(${ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY })`>
     <HeadingTwoWhite>{ data.title }</HeadingTwoWhite>
     <ButtonWhite>{ data.button_one_text }</ButtonWhite>
 </section>
