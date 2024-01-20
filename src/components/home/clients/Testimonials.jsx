@@ -8,12 +8,12 @@ const Testimonials = ( props ) => {
 
     return (
         <section className="w-full h-full relative">
-            <Carousel showThumbs={ false } showStatus={ false } showArrows={ false } autoPlay={ true } infiniteLoop={ true }>
+            <Carousel showThumbs={ false } showStatus={ false } showArrows={ false } autoPlay={ true } infiniteLoop={ true } className="h-full">
                 {
 
                     data.map(  ( value, index ) => {
                         return (
-                            <div key={ "testimonial-" + index } className="relative w-full flex flex-col gap-6 justify-center items-center bg-gradient-to-tr from-saritasa_orange to-saritasa_light_orange h-full p-10">
+                            <div key={ "testimonial-" + index } className="relative w-full flex flex-col gap-6 justify-center items-center bg-gradient-to-tr from-saritasa_orange to-saritasa_light_orange h-full p-4">
                                 <div className="border border-white rounded-full p-3 w-fit mb-2">
                                     <div className="w-6 aspect-square">
                                         <img
