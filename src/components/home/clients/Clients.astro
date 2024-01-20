@@ -7,7 +7,7 @@ import Highlights from "./Highlights.astro"
 const { testimonials, clients, highlights } = Astro.props
 ---
 <section class="relative h-full">
-    <section class="grid grid-cols-3 h-full">
+    <section class="grid grid-cols-1 md:grid-cols-3 h-full">
         <Testimonials
             data={ testimonials }
             client:load

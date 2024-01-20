@@ -22,7 +22,7 @@ const HighlightsItem = ( props ) => {
                 />
             </div>
             <div>
-                <p className="text-5xl text-saritasa_primary font-avenir font-semibold text-center">{ statistics }</p>
+                <p className="text-2xl md:text-5xl text-saritasa_primary font-avenir font-semibold text-center">{ statistics }</p>
                 <p className="text-lg text-saritasa_primary font-avenir font-semibold text-center">{ title }</p>
             </div>
         </div>
