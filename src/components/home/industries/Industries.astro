@@ -8,7 +8,7 @@ import IndustriesWeServe from "./IndustriesWeServe.astro"
 const { data, industries } = Astro.props
 ---
 <section class="grid grid-cols-2 border-t border-saritasa_primary mt-60">
-    <section class="flex items-center justify-center bg-zinc-200" style=`background-image: url(${ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY })`>
+    <section class="flex items-center justify-center bg-zinc-200 bg-no-repeat bg-cover" style=`background-image: url(${ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY })`>
         <div class="bg-white/70 rounded-full p-8 flex gap-4 w-fit">
             <div class="w-20 aspect-square">
                 <img
