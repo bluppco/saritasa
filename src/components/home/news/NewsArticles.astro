@@ -4,7 +4,7 @@ import NewsArticleItem from "./NewsArticleItem.astro"
 
 const { data } = Astro.props
 ---
-<div class="grid grid-cols-2 gap-x-14 gap-y-8 p-16 bg-white rounded-3xl shadow-xl border border-zinc-200">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-8 p-4 md:p-16 bg-white rounded-3xl shadow-xl border border-zinc-200">
     {
 
         data.map( ( value ) => {
