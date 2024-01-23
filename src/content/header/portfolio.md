@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-slug: /portfolio
+slug: portfolio
 order: 2
 has_dropdown: false
 ---

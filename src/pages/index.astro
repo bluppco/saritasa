@@ -2,6 +2,7 @@
 import { homeAPI } from "../api/home/index"
 
 const runtime = Astro.locals.runtime;
+const env = runtime.env.ENVIRONMENT
 const data = await homeAPI( runtime.env.ENVIRONMENT )
 
 const { home_data, services, projects, highlights, industries, news, testimonials, meta_tags } = data
@@ -11,7 +12,7 @@ import Layout from "../layouts/Layout.astro"
 
 // IMPORT ASTRO COMPONENTS
 import HeaderBanner from "../components/home/HeaderBanner.astro"
-import Header from "../components/common/header/Header.astro"
+import Header from "../components/common/header/Header.jsx"
 import Hero from "../components/home/Hero.astro"
 import Services from "../components/home/services/Services.astro"
 import FeaturedProjects from "../components/home/projects/FeaturedProjects.astro"
@@ -28,7 +29,7 @@ import Footer from "../components/common/footer/Footer.astro"
 >
 	<section class="md:h-screen 2xl:h-[720px] md:max-h-screen">
 		<HeaderBanner />
-		<Header />
+		<Header environment={ env } />
 		<section class="relative w-full h-full">
 			<Hero data={ home_data.hero } />
 			<Services data={ home_data.services } services={ services }  />
@@ -41,3 +42,4 @@ import Footer from "../components/common/footer/Footer.astro"
 	<ScopeMyProject data={ home_data.scope_my_project } />
 	<Footer />
 </Layout>
+../components/common/header/Header.jsx
