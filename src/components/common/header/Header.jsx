@@ -55,7 +55,7 @@ const Header = ( props ) => {
                                                             className="w-3 aspect-square"
                                                             alt="dropdown menu icon"
                                                         />
-                                                        <div className="hidden group-hover:block group-hover:flex-col absolute p-6 bg-white left-0 z-20 top-7 w-96 gap-2 shadow transition-all duration-300 delay-1000">
+                                                        <div className="hidden group-hover:block group-hover:flex-col absolute p-6 bg-white left-0 z-20 top-7 w-[460px] gap-2 shadow transition-all duration-300 delay-1000">
                                                             <div className="grid grid-cols-2 gap-x-4">
                                                                 {
 
@@ -68,7 +68,7 @@ const Header = ( props ) => {
                                                                                     className="text-slate-700 hover:text-saritasa_black hover:underline"
                                                                                     aria-label={ "explore" + sub_item.title }
                                                                                 >
-                                                                                    <div className="text-sm font-light capitalize tracking-wide text-t font-avenir">{ sub_item.title }</div>
+                                                                                    <div className="font-light capitalize tracking-wide text-t font-avenir">{ sub_item.title }</div>
                                                                                 </a>
                                                                             </div>
                                                                         )
