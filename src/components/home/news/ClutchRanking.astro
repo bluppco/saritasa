@@ -1,6 +1,7 @@
 ---
 // IMPORT ASTRO ATOMS
 import HeadingThreeOrangeCenter from "../../../atoms/heading/ThreeOrangeCenter.astro"
+import Link from "../../../atoms/links/index.astro"
 
 // IMPORTS CONSTANTS
 import { CDN_LINK, IMAGE_QUALITY } from "../../../constants/cdn"
@@ -23,11 +24,13 @@ const { data } = Astro.props
         <HeadingThreeOrangeCenter>{ data.title }</HeadingThreeOrangeCenter>
     </div>
     <p class="text-saritasa_black font-avenir text-2xl text-center leading-normal">{ data.description }</p>
-    <div class="w-full aspect-[4/1] px-20">
-        <img
-            src={ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY }
-            alt=""
-            class="w-full h-full"
-        />
-    </div>
+    <Link href="/resources/saritasa-ranked-1-custom-software-developer-in-los-angeles-new-york/" aria_label="">
+        <div class="w-full aspect-[4/1] px-20">
+            <img
+                src={ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY }
+                alt=""
+                class="w-full h-full"
+            />
+        </div>
+    </Link>
 </div>
