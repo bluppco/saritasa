@@ -1,6 +1,7 @@
 ---
 title: Technologies
 order: 3
+slug: technologies
 has_dropdown: true
 items: [
     {

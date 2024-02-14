@@ -1,6 +1,7 @@
 ---
 title: Services
 order: 3
+slug: services
 has_dropdown: true
 items: [
     {
