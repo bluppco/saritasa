@@ -15,7 +15,7 @@ items: [
     },
     {
         title: AR/VR Development,
-        slug: /3d-development",
+        slug: 3d-development",
         order: 3
     },
     {

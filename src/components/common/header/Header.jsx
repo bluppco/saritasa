@@ -57,7 +57,7 @@ const Header = ( props ) => {
                                                                 className="w-3 aspect-square"
                                                                 alt="dropdown menu icon"
                                                             />
-                                                            <div className="hidden group-hover:block group-hover:flex-col absolute p-6 bg-white left-0 z-20 top-7 w-[460px] gap-2 shadow transition-all duration-300 delay-1000">
+                                                            <div className="hidden group-hover:block group-hover:flex-col absolute p-6 bg-white left-0 z-20 top-8 w-[460px] gap-2 shadow transition-all duration-300 delay-1000">
                                                                 <div className="grid grid-cols-2 gap-x-4">
                                                                     {
 
@@ -66,7 +66,7 @@ const Header = ( props ) => {
                                                                             return(
                                                                                 <div className="py-1">
                                                                                     <a
-                                                                                        href={ "/" + item.data.slug + "/" + sub_item.slug }
+                                                                                        href={ "/" + sub_item.slug }
                                                                                         className="text-slate-700 hover:text-saritasa_black hover:underline"
                                                                                         aria-label={ "explore" + sub_item.title }
                                                                                     >
