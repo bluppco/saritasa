@@ -1,0 +1,26 @@
+---
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import HeadingTwoCenter from "@/atoms/headings/two/center/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import AllArticles from "./all-articles/index.astro"
+import ClutchRanking from "./clutch-ranking/index.astro"
+
+const { data, news } = Astro.props
+---
+<Container>
+    <section class="space-y-8 py-16">
+        <HeadingTwoCenter>{ data.section }</HeadingTwoCenter>
+        <section class="grid grid-cols-3 gap-6">
+            <section>
+                <ClutchRanking data={ data } />
+            </section>
+            <section class="col-span-2">
+                <AllArticles data={ news } />
+            </section>
+        </section>
+    </section>
+</Container>

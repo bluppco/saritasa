@@ -1,0 +1,19 @@
+---
+// IMPORTS ASTRO ATOMS
+import ContainLeftPicture from "@/atoms/picture/contain/left/index.astro"
+
+const {
+
+    src,
+    alt,
+    image_width
+
+} = Astro.props
+---
+<div class="w-full h-12">
+    <ContainLeftPicture
+        src={ src }
+        alt={ alt }
+        image_width={ image_width }
+    />
+</div>

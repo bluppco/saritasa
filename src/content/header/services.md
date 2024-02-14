@@ -1,6 +1,7 @@
 ---
 title: Services
 order: 3
+slug: services
 has_dropdown: true
 items: [
     {
@@ -15,7 +16,7 @@ items: [
     },
     {
         title: AR/VR Development,
-        slug: /3d-development",
+        slug: 3d-development",
         order: 3
     },
     {

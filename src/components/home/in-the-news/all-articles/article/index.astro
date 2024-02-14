@@ -1,0 +1,28 @@
+---
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/links/target-blank/index.astro"
+import ContainLeftPicture from "@/atoms/picture/contain/left/index.astro"
+
+const {
+
+    src,
+    alt,
+    href,
+    title
+
+} = Astro.props
+---
+<div class="space-y-2">
+    <div class="w-full h-10">
+        <ContainLeftPicture
+            src={ src }
+            alt={ alt }
+            image_width="400"
+        />
+    </div>
+    <div>
+        <Link href={ href } aria_label="">
+            <p class="font-avenir text-lg font-light hover:underline cursor-pointer">{ title }</p>
+        </Link>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+---
+// IMPORTS ASTRO ATOMS
+import HeadingTwoCenter from "@/atoms/headings/two/center/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import Project from "./project/index.astro"
+
+const { data, projects } = Astro.props
+---
+<section class="pt-[440px] 2xl:pt-[540px] space-y-8">
+    <HeadingTwoCenter>{ data.title }</HeadingTwoCenter>
+    <div class="grid grid-cols-4 border-t-2 border-saritasa_primary">
+        {
+
+            projects.map( ( value ) => {
+
+                return(
+                    <Project
+                        src={ value.cover }
+                        alt={ value.title }
+                        title={ value.title }
+                        category={ value.category }
+                    />
+                )
+
+            })
+
+        }
+    </div>
+</section>
