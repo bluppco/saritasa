@@ -22,7 +22,7 @@ const Header = ( props ) => {
 
     const { environment } = props
 
-    const [ activePage, setActivePage ] = useState("Home")
+    const [ activePage, setActivePage ] = useState(1)
 
     return(
         <>
@@ -45,10 +45,9 @@ const Header = ( props ) => {
                                     header_data.map( ( item, index ) => {
 
                                         return (
-                                            <li className="group">
-                                                <div key={ index } className={` ${ activePage === item.data.title ? "border-saritasa_primary" : "border-transparent" } pb-1 border-b-2 text-base text-slate-500 font-avenir font-semibold uppercase flex items-center gap-2 relative group cursor-pointer`} onClick={() => setActivePage( item.data.title )}>
-
-                                                    <Link href={ "/" + item.data.slug } className="group-hover:text-saritasa_black" aria_label={"explore " + item.data.title }>{ item.data.title }</Link>
+                                            <li className="group" key={ index } onClick={() => setActivePage( item.data.order )}>
+                                                <div className={` ${ activePage === item.data.order ? "border-saritasa_primary" : "border-transparent" } pb-1 border-b-2 text-base text-slate-500 font-avenir font-semibold uppercase flex items-center gap-2 relative group cursor-pointer`}>
+                                                    <a href={ "/" + item.data.slug } className="group-hover:text-saritasa_black" aria_label={"explore " + item.data.title }>{ item.data.title }</a>
                                                     {
 
                                                         item.data.has_dropdown &&
