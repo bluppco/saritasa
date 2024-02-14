@@ -84,7 +84,7 @@ const Header = ( props ) => {
 
                                                     }
                                                 </div>
-                                                <div class="w-0 bg-saritasa_primary group-hover:w-full h-[2px] transition-width duration-200 ease-in"></div>
+                                                <div className="w-0 bg-saritasa_primary group-hover:w-full h-[2px] transition-width duration-200 ease-in"></div>
                                             </li>
                                         )
 
