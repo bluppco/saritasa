@@ -1,6 +1,6 @@
 ---
 title: Resources
-slug: /resources
+slug: resources
 order: 5
 has_dropdown: false
 ---

@@ -1,0 +1,26 @@
+---
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/links/index.astro"
+
+const {
+
+    title,
+    src,
+    alt,
+    href,
+    aria_label
+
+} = Astro.props
+---
+<div class="flex gap-4 items-center">
+    <div class="w-6 aspect-square">
+        <img
+            src={ src }
+            alt={ alt }
+            class="w-6 aspect-square"
+        />
+    </div>
+    <Link href={ href } aria_label={ aria_label }>
+        <p class="text-white text-xs font-avenir">{ title }</p>
+    </Link>
+</div>

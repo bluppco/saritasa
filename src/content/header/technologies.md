@@ -1,6 +1,7 @@
 ---
 title: Technologies
 order: 3
+slug: technologies
 has_dropdown: true
 items: [
     {
@@ -10,63 +11,58 @@ items: [
     },
     {
         title: .NET Development,
-        slug: web-development,
+        slug: net-developmen,
         order: 2
-    },
-    {
-        title: AR/VR Development,
-        slug: net-development",
-        order: 3
     },
     {
         title: PHP Development,
         slug: php-development,
-        order: 4
+        order: 3
     },
     {
         title: React.JS Development,
         slug: react-js-development,
-        order: 5
+        order: 4
     },
     {
         title: Angular.JS Development,
         slug: angular-js-development,
-        order: 6
+        order: 5
     },
     {
         title: Kotlin Development,
         slug: kotlin-development,
-        order: 7
+        order: 6
     },
     {
         title: Swift Development,
         slug: swift-development,
-        order: 8
+        order: 7
     },
     {
         title: C / C# / C++,
         slug: c-development,
-        order: 9
+        order: 8
     },
     {
         title: L.A.M.P. Development,
         slug: lamp-development,
-        order: 10
+        order: 9
     },
     {
         title: Unity Development,
         slug: unity-development,
-        order: 11
+        order: 10
     },
     {
         title: Laravel Development,
         slug: laravel-development,
-        order: 12
+        order: 11
     },
     {
         title: Django Development,
         slug: django-development,
-        order: 13
+        order: 12
     }
 ]
 ---

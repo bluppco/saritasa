@@ -1,0 +1,30 @@
+---
+// IMPORT ASTRO COMPONENTS
+import FooterHeading from "../heading/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/links/index.astro"
+
+const { title, data } = Astro.props
+---
+<div class="flex flex-col gap-4">
+    <FooterHeading>{ title }</FooterHeading>
+    <ul class="space-y-1">
+        {
+
+            data.map( ( item ) => {
+
+                return (
+                    <li class="font-avenir text-xs text-white">
+                        <Link href={ item.data.link } aria_label="">
+                            <p>{ item.data.title }</p>
+                        </Link>
+                    </li>
+
+                )
+
+            })
+
+        }
+    </ul>
+</div>

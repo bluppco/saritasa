@@ -1,0 +1,38 @@
+---
+const runtime = Astro.locals.runtime
+const CDN_LINK = runtime.env.CDN_LINK
+const PROJECT = runtime.env.PROJECT
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import HighlightsCounter from "./highlights-counter/index.jsx"
+
+const { data } = Astro.props
+---
+<section class="absolute -bottom-44 w-full">
+    <Container>
+        <section class="flex justify-between bg-white rounded-2xl shadow px-24 py-10">
+            {
+
+                data.map( ( value ) => {
+
+                    return(
+                        <HighlightsCounter
+                            title={ value.title }
+                            statistics={ value.statistics }
+                            src={ value.cover }
+                            alt={ value.title }
+                            CDN_LINK={ CDN_LINK }
+                            PROJECT={ PROJECT }
+                            client:load
+                        />
+                    )
+
+                })
+
+            }
+        </section>
+    </Container>
+</section>
