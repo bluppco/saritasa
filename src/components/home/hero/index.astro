@@ -1,0 +1,35 @@
+---
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import HeadingOne from "@/atoms/headings/one/index.astro"
+import PrimaryButton from "@/atoms/buttons/primary/index.astro"
+import TransparentButton from "@/atoms/buttons/transparent/index.astro"
+import ContainPicture from "@/atoms/picture/contain/index.astro"
+
+const { data } = Astro.props
+---
+<section class="bg-saritasa_dark_blue h-screen 2xl:h-[900px] py-60">
+    <Container>
+        <section class="grid grid-cols-2 gap-10">
+            <section class="space-y-6">
+                <HeadingOne>{ data.title }</HeadingOne>
+                <p class="text-white text-2xl font-avenir">{ data.description }</p>
+                <div class="flex gap-4">
+                    <PrimaryButton>{ data.button_one_text }</PrimaryButton>
+                    <TransparentButton>{ data.button_two_text }</TransparentButton>
+                </div>
+            </section>
+            <section class="flex justify-end">
+                <div class="w-[480px] aspect-square">
+                    <ContainPicture
+                        src={ data.cover }
+                        alt=""
+                        image_width="400"
+                    />
+                </div>
+            </section>
+        </section>
+    </Container>
+</section>

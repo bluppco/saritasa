@@ -1,44 +1,68 @@
 ---
-import { homeAPI } from "../api/home/index"
+import { homeAPI } from "@/api/home/index"
 
 const runtime = Astro.locals.runtime;
 const env = runtime.env.ENVIRONMENT
 const data = await homeAPI( runtime.env.ENVIRONMENT )
 
+const CDN_LINK = runtime.env.CDN_LINK
+const PROJECT = runtime.env.PROJECT
+const WEBSITE = runtime.env.WEBSITE
+
+
 const { home_data, services, projects, highlights, industries, news, testimonials, meta_tags } = data
 
-// IMPORT ASTRO LAYOUTS
-import Layout from "../layouts/Layout.astro"
+// IMPORTS ASTRO LAYOUTS
+import Layout from "@/layouts/layout/index.astro"
 
-// IMPORT ASTRO COMPONENTS
-import HeaderBanner from "../components/home/HeaderBanner.astro"
-import Header from "../components/common/header/Header.jsx"
-import Hero from "../components/home/Hero.astro"
-import Services from "../components/home/services/Services.astro"
-import FeaturedProjects from "../components/home/projects/FeaturedProjects.astro"
-import InTheNews from "../components/home/news/InTheNews.astro"
-import Clients from "../components/home/clients/Clients.astro"
-import Industries from "../components/home/industries/Industries.astro"
-import ScopeMyProject from "../components/home/ScopeMyProject.astro"
-import Footer from "../components/common/footer/Footer.astro"
+// IMPORTS ASTRO COMPONENTS
+import HeaderBanner from "@/components/home/header-banner/index.astro"
+import Header from "@/components/common/header/index.jsx"
+import Hero from "@/components/home/hero/index.astro"
+import Services from "@/components/home/services/index.astro"
+import FeaturedProjects from "@/components/home/featured-projects/index.astro"
+import InTheNews from "@/components/home/in-the-news/index.astro"
+import Clients from "@/components/home/clients/index.astro"
+import Industries from "@/components/home/industries/index.astro"
+import ScopeMyProject from "@/components/home/scope-my-project/index.astro"
+import Footer from "@/components/common/footer/index.astro"
 ---
 <Layout
-	title="Saritasa - Top Custom Development Company"
-	description="Saritasa is a custom technology solutions company developing complex software systems. We build Web and Mobile Apps, CRM systems, VR experiences, and more."
-	image=""
+	title={ meta_tags.title }
+	description={ meta_tags.description }
+	image={ meta_tags.image }
+	CDN_LINK={ CDN_LINK }
+	PROJECT={ PROJECT }
+	WEBSITE={ WEBSITE }
 >
 	<section class="md:h-screen 2xl:h-[720px] md:max-h-screen">
 		<HeaderBanner />
 		<Header environment={ env } />
 		<section class="relative w-full h-full">
 			<Hero data={ home_data.hero } />
-			<Services data={ home_data.services } services={ services }  />
+			<Services
+				data={ home_data.services }
+				services={ services }
+			/>
 		</section>
 	</section>
-	<FeaturedProjects data={ home_data.projects } projects={ projects } />
-	<InTheNews data={ home_data.in_the_news } news={ news } />
-	<Clients testimonials={ testimonials } clients={ home_data.clients } highlights={ highlights } />
-	<Industries data={ home_data.industries_we_serve } industries={ industries } />
+	<FeaturedProjects
+		data={ home_data.projects }
+		projects={ projects }
+	/>
+	<InTheNews
+		data={ home_data.in_the_news }
+		news={ news }
+	/>
+	<Clients
+		testimonials={ testimonials }
+		clients={ home_data.clients }
+		highlights={ highlights }
+	/>
+	<Industries
+		data={ home_data.industries_we_serve }
+		industries={ industries }
+	/>
 	<ScopeMyProject data={ home_data.scope_my_project } />
 	<Footer />
 </Layout>
