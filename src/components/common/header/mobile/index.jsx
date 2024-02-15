@@ -13,6 +13,7 @@ import Link from "@/atoms/links/jsx/index.jsx"
 const MobileHeader = () => {
 
     const [ isOpen, updateOpen ] = useState( false )
+
     return (
         <header className="md:hidden px-6 py-6 z-20 w-full">
             <div className="flex justify-between items-center z-20">

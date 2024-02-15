@@ -1,13 +1,9 @@
 ---
-const runtime = Astro.locals.runtime
-const CDN_LINK = runtime.env.CDN_LINK
-const PROJECT = runtime.env.PROJECT
-
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import HighlightsCounter from "./highlights-counter/index.jsx"
+import HighlightsCard from "./card/index.astro"
 
 const { data } = Astro.props
 ---
@@ -19,14 +15,11 @@ const { data } = Astro.props
                 data.map( ( value ) => {
 
                     return(
-                        <HighlightsCounter
+                        <HighlightsCard
                             title={ value.title }
                             statistics={ value.statistics }
                             src={ value.cover }
                             alt={ value.title }
-                            CDN_LINK={ CDN_LINK }
-                            PROJECT={ PROJECT }
-                            client:load
                         />
                     )
 
