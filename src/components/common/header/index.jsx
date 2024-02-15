@@ -57,7 +57,7 @@ const Header = ( props ) => {
                                                                 className="w-3 aspect-square"
                                                                 alt="dropdown menu icon"
                                                             />
-                                                            <div className="hidden group-hover:block group-hover:flex-col absolute p-6 bg-white left-0 z-20 top-8 w-[460px] gap-2 shadow transition-all duration-300 delay-1000">
+                                                            <div className="opacity-0 group-hover:opacity-100 group-hover:flex-col absolute p-6 bg-white left-0 z-20 top-8 w-[460px] gap-2 shadow transition-all duration-0 delay-200">
                                                                 <div className="grid grid-cols-2 gap-x-4">
                                                                     {
 

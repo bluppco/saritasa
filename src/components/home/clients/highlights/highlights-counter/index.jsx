@@ -1,7 +1,7 @@
 // IMPORTS ATOMS
 import ContainPicture from "@/atoms/picture/contain/jsx/index.jsx"
 
-const HighlightsItem = ( props ) => {
+const HighlightsCounter = ( props ) => {
 
     const {
 
@@ -34,4 +34,4 @@ const HighlightsItem = ( props ) => {
 
 }
 
-export default HighlightsItem
+export default HighlightsCounter
