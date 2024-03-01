@@ -18,8 +18,8 @@ const VideoModal = ( props ) => {
                 <div className="absolute -top-[18px] -right-[18px] md:-top-2 md:-right-3">
                     <div className="hover:bg-zinc-200 p-1 cursor-pointer" onClick={ () => close() }>
                         <img
-                            src="/icons/cross.svg"
                             className="w-3 md:w-4 aspect-square"
+                            src="/icons/cross.svg"
                         />
                     </div>
                 </div>

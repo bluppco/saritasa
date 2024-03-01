@@ -2,12 +2,14 @@
 
 // IMPORTS ASTRO ATOMS
 import Link from "@/atoms/links/index.astro"
-import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
+import PictureContain from "@/atoms/picture/contain/index.astro"
 
 const {
 
     alternative_text,
+    CDN,
     href,
+    PROJECT,
     source,
     title
 
@@ -15,11 +17,13 @@ const {
 
 ---
 <div class="hover:bg-white hover:shadow-lg hover:shadow-black/20 p-2 rounded">
-    <Link href={ href } aria_label="">
+    <Link href={ href } aria_label={ title }>
         <div class="flex gap-4 items-center">
             <div class="w-12 aspect-square">
-                <PictureInternalContain
+                <PictureContain
                     alternative_text={ alternative_text }
+                    CDN={ CDN }
+                    PROJECT={ PROJECT }
                     source={ source }
                 />
             </div>

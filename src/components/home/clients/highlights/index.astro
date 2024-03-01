@@ -7,7 +7,13 @@ import Container from "@/layouts/container/index.astro"
 import HighlightsCard from "@/components/home/clients/highlights/card/index.astro"
 
 // GET ASTRO PROPS
-const { data } = Astro.props
+const {
+
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
 
 ---
 <section class="absolute -bottom-44 w-full">
@@ -19,10 +25,12 @@ const { data } = Astro.props
 
                     return(
                         <HighlightsCard
-                            title={ value.title }
-                            statistics={ value.statistics }
-                            source={ value.cover }
                             alternative_text={ value.title }
+                            CDN={ CDN }
+                            PROJECT={ PROJECT }
+                            source={ value.cover }
+                            statistics={ value.statistics }
+                            title={ value.title }
                         />
                     )
 

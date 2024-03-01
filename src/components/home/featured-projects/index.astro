@@ -8,7 +8,9 @@ import HeadingTwoCenter from "@/atoms/headings/two/center/index.astro"
 
 const {
 
+    CDN,
     data,
+    PROJECT,
     projects
 
 } = Astro.props
@@ -23,10 +25,12 @@ const {
 
                 return(
                     <Project
-                        source={ value.cover }
                         alternative_text={ value.title }
-                        title={ value.title }
                         category={ value.category }
+                        CDN={ CDN }
+                        PROJECT={ PROJECT }
+                        source={ value.cover }
+                        title={ value.title }
                     />
                 )
 

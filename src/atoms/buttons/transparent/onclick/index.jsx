@@ -3,7 +3,7 @@ import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.j
 
 const Button = ( props ) => {
 
-    // PROPS
+    // GET PROPS
     const { onClick } = props
 
     return(

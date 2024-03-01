@@ -1,13 +1,13 @@
+// IMPORTS ATOMS
+import Link from "@/atoms/links/jsx/index.jsx"
+import ListItem from "@/atoms/header/mobile/list-item/index.jsx"
+import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
+
 // IMPORTS FRAMER MOTION
 import { motion, AnimatePresence } from "framer-motion"
 
 // IMPORTS REACT
 import { useState } from "react"
-
-// IMPORTS ATOMS
-import Link from "@/atoms/links/jsx/index.jsx"
-import ListItem from "@/atoms/header/mobile/list-item/index.jsx"
-import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
 
 const MobileHeader = () => {
 
@@ -16,7 +16,7 @@ const MobileHeader = () => {
     return (
         <header className="md:hidden px-6 py-6 z-20 w-full">
             <div className="flex justify-between items-center z-20">
-                <Link href="/" aria_label="">
+                <Link href="/" aria_label="logo">
                     <div className="w-28 aspect-video">
                         <PictureInternalContain
                             alternative_text="logo"
@@ -28,20 +28,23 @@ const MobileHeader = () => {
                     {
 
                         isOpen &&
-                        <PictureInternalContain
-                            alternative_text="close icon"
-                            source="/icons/close.svg"
-                        />
+                        <div className="size-4">
+                            <PictureInternalContain
+                                alternative_text="close icon"
+                                source="/icons/close.svg"
+                            />
+                        </div>
 
                     }
                     {
 
                         !isOpen &&
-                        <PictureInternalContain
-                            alternative_text="menu icon"
-                            source="/icons/menu.svg"
-                        />
-
+                        <div className="size-4">
+                            <PictureInternalContain
+                                alternative_text="menu icon"
+                                source="/icons/menu.svg"
+                            />
+                        </div>
                     }
                 </div>
             </div>

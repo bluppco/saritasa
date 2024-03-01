@@ -4,7 +4,13 @@
 import Image from "./image/index.astro"
 
 // GET ASTRO PROPS
-const { data } = Astro.props
+const {
+
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
 
 // SORTS THE IMAGES ARRAY
 const images = data.images.sort(( a,b ) => a.order - b.order )
@@ -19,7 +25,9 @@ const images = data.images.sort(( a,b ) => a.order - b.order )
             return(
                 <Image
                     alternative_text=""
+                    CDN={ CDN }
                     image_width="200"
+                    PROJECT={ PROJECT }
                     source={ value.file }
                 />
             )

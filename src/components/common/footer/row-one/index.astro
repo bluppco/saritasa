@@ -4,11 +4,11 @@
 import Container from "@/layouts/container/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import FooterColumnOne from "@/components/common/footer/column-one/index.astro"
-import FooterColumnTwo from "@/components/common/footer/column-two/index.astro"
-import FooterColumnThree from "@/components/common/footer/column-three/index.astro"
-import FooterColumnFour from "@/components/common/footer/column-four/index.astro"
 import FooterColumnFive from "@/components/common/footer/column-five/index.astro"
+import FooterColumnFour from "@/components/common/footer/column-four/index.astro"
+import FooterColumnOne from "@/components/common/footer/column-one/index.astro"
+import FooterColumnThree from "@/components/common/footer/column-three/index.astro"
+import FooterColumnTwo from "@/components/common/footer/column-two/index.astro"
 
 // IMPORTS FOOTER COLLECTION
 import { getCollection } from 'astro:content'
@@ -25,10 +25,10 @@ footer_column_three = footer_column_three.sort((a, b) => a.data.order - b.data.o
 let footer_column_four = await getCollection('footer-column-four')
 footer_column_four = footer_column_four.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
 
-import { frontmatter as footerColumnOne } from "@/content/footer-titles/title-one.md"
-import { frontmatter as footerColumnTwo } from "@/content/footer-titles/title-two.md"
-import { frontmatter as footerColumnThree } from "@/content/footer-titles/title-three.md"
 import { frontmatter as footerColumnFour } from "@/content/footer-titles/title-four.md"
+import { frontmatter as footerColumnOne } from "@/content/footer-titles/title-one.md"
+import { frontmatter as footerColumnThree } from "@/content/footer-titles/title-three.md"
+import { frontmatter as footerColumnTwo } from "@/content/footer-titles/title-two.md"
 
 ---
 <section class="bg-saritasa_dark_gray py-10">
@@ -36,22 +36,22 @@ import { frontmatter as footerColumnFour } from "@/content/footer-titles/title-f
     <section class="flex justify-between">
         <section class="grid md:grid-cols-2 gap-4 md:gap-20">
             <FooterColumnOne
-                title={ footerColumnOne.title }
                 data={ footer_column_one }
+                title={ footerColumnOne.title }
             />
             <FooterColumnTwo
-                title={ footerColumnTwo.title }
                 data={ footer_column_two }
+                title={ footerColumnTwo.title }
             />
         </section>
         <section class="grid md:grid-cols-2 gap-4 md:gap-20">
             <FooterColumnThree
-                title={ footerColumnThree.title }
                 data={ footer_column_three }
+                title={ footerColumnThree.title }
             />
             <FooterColumnFour
-                title={ footerColumnFour.title }
                 data={ footer_column_four }
+                title={ footerColumnFour.title }
             />
         </section>
         <FooterColumnFive />

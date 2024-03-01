@@ -13,8 +13,10 @@ import HeadingTwoCenter from "@/atoms/headings/two/center/index.astro"
 // GET ASTRO PROPS
 const {
 
+    CDN,
     data,
-    news
+    news,
+    PROJECT
 
 } = Astro.props
 
@@ -24,10 +26,18 @@ const {
         <HeadingTwoCenter>{ data.section }</HeadingTwoCenter>
         <section class="grid grid-cols-3 gap-6">
             <section>
-                <ClutchRanking data={ data } />
+                <ClutchRanking
+                    CDN={ CDN }
+                    data={ data }
+                    PROJECT={ PROJECT }
+                />
             </section>
             <section class="col-span-2">
-                <AllArticles data={ news } />
+                <AllArticles
+                    CDN={ CDN }
+                    data={ news }
+                    PROJECT={ PROJECT }
+                />
             </section>
         </section>
     </section>

@@ -1,19 +1,20 @@
 ---
 
 // IMPORTS ASTRO COMPONENTS
-import HeadingTwoWhite from "@/atoms/headings/two/white/index.astro"
 import ButtonWhite from "@/atoms/buttons/white/index.astro"
+import HeadingTwoWhite from "@/atoms/headings/two/white/index.astro"
 
 // GET ASTRO PROPS
 const {
 
     CDN,
-    data
+    data,
+    PROJECT
 
 } = Astro.props
 ---
 <section class="h-[420px] pt-32 relative">
-    <div class="bg-no-repeat bg-cover bg-white z-10 w-full h-full absolute top-0" style=`background-image: url(${ CDN + data.cover + "?quality=80" })`>
+    <div class="bg-no-repeat bg-cover bg-white z-10 w-full h-full absolute top-0" style=`background-image: url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })`>
         <div class="relative flex flex-col gap-8 items-center justify-center h-full">
             <HeadingTwoWhite>{ data.title }</HeadingTwoWhite>
             <div>

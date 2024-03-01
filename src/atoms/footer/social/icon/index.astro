@@ -1,5 +1,8 @@
 ---
 
+// IMPORTS ASTRO ATOMS
+import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
+
 // GET ASTRO PROPS
 const {
 
@@ -11,10 +14,9 @@ const {
 ---
 <div class="border rounded-full p-2">
     <div class="w-6 aspect-square">
-        <img
-            src={ source }
-            alt={ alternative_text }
-            class="w-6 aspect-square"
+        <PictureInternalContain
+            alternative_text={ alternative_text }
+            source={ source }
         />
     </div>
 </div>

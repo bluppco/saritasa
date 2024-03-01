@@ -1,15 +1,18 @@
 ---
 
-// IMPORT ASTRO LAYOUTS
+// IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
 import Service from "@/components/home/services/service/index.astro"
 import OurServices from "@/components/home/services/our-services/index.astro"
 
+// GET ASTRO PROPS
 const {
 
+    CDN,
     data,
+    PROJECT,
     services
 
 } = Astro.props
@@ -30,7 +33,9 @@ const {
                             return(
                                 <Service
                                     alternative_text={ value.name }
+                                    CDN={ CDN }
                                     href=""
+                                    PROJECT={ PROJECT }
                                     source={ value.cover }
                                     title={ value.name }
                                 />

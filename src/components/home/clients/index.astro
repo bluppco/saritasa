@@ -10,8 +10,10 @@ import Testimonials from "@/components/home/clients/testimonials/index.jsx"
 // GET ASTRO PROPS
 const {
 
+    CDN,
     clients,
     highlights,
+    PROJECT,
     testimonials
 
 } = Astro.props
@@ -24,8 +26,16 @@ const {
             data={ testimonials }
         />
         <section class="col-span-2">
-            <ClientsLogo data={ clients } />
+            <ClientsLogo
+                CDN={ CDN }
+                data={ clients }
+                PROJECT={ PROJECT }
+            />
         </section>
     </section>
-    <Highlights data={ highlights } />
+    <Highlights
+        CDN={ CDN }
+        data={ highlights }
+        PROJECT={ PROJECT }
+    />
 </section>

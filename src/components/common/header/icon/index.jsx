@@ -20,8 +20,8 @@ const HeaderIcon = ( props ) => {
             <div className="flex flex-col gap-2 items-center">
                 <div className="w-8 aspect-square">
                     <PictureInternalContain
-                        source={ source }
                         alternative_text={ alternative_text }
+                        source={ source }
                     />
                 </div>
                 <p className="font-avenir font-semibold text-saritasa_primary text-xs uppercase">{ text }</p>

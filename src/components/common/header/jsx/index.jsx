@@ -1,6 +1,3 @@
-// IMPORTS USESTATE
-import { useState } from "react"
-
 // IMPORTS LAYOUTS
 import Container from "@/layouts/container/jsx/index.jsx"
 
@@ -11,6 +8,9 @@ import HeaderIcon from "@/components/common/header/icon/index.jsx"
 // IMPORTS ATOMS
 import Link from "@/atoms/links/jsx/index.jsx"
 import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
+
+// IMPORTS USESTATE
+import { useState } from "react"
 
 // IMPORTS HEADER COLLECTION
 import { getCollection } from "astro:content"
@@ -68,9 +68,9 @@ const Header = ( props ) => {
                                                                             return(
                                                                                 <div className="py-1">
                                                                                     <a
-                                                                                        href={ "/" + sub_item.slug }
-                                                                                        className="text-slate-700 hover:text-saritasa_black hover:underline"
                                                                                         aria-label={ "explore" + sub_item.title }
+                                                                                        className="text-slate-700 hover:text-saritasa_black hover:underline"
+                                                                                        href={ "/" + sub_item.slug }
                                                                                     >
                                                                                         <div className="font-light capitalize tracking-wide text-t font-avenir">{ sub_item.title }</div>
                                                                                     </a>

@@ -1,16 +1,16 @@
 ---
 
 // IMPORTS ASTRO COMPONENTS
-import HeaderBanner from "@/components/home/header-banner/index.astro"
-import Header from "@/components/common/header/jsx/index.jsx"
-import Hero from "@/components/home/hero/index.astro"
-import Services from "@/components/home/services/index.astro"
-import FeaturedProjects from "@/components/home/featured-projects/index.astro"
-import InTheNews from "@/components/home/in-the-news/index.astro"
 import Clients from "@/components/home/clients/index.astro"
-import Industries from "@/components/home/industries/index.astro"
-import ScopeMyProject from "@/components/home/scope-my-project/index.astro"
+import FeaturedProjects from "@/components/home/featured-projects/index.astro"
 import Footer from "@/components/common/footer/index.astro"
+import Header from "@/components/common/header/jsx/index.jsx"
+import HeaderBanner from "@/components/home/header-banner/index.astro"
+import Hero from "@/components/home/hero/index.astro"
+import Industries from "@/components/home/industries/index.astro"
+import InTheNews from "@/components/home/in-the-news/index.astro"
+import ScopeMyProject from "@/components/home/scope-my-project/index.astro"
+import Services from "@/components/home/services/index.astro"
 
 const {
 
@@ -32,24 +32,36 @@ const {
     <HeaderBanner ENVIRONMENT={ ENVIRONMENT } />
     <Header ENVIRONMENT={ ENVIRONMENT } />
     <section class="relative w-full h-full">
-        <Hero data={ home_data.hero } />
+        <Hero
+            CDN={ CDN }
+            data={ home_data.hero }
+            PROJECT={ PROJECT }
+        />
         <Services
+            CDN={ CDN }
             data={ home_data.services }
+            PROJECT={ PROJECT }
             services={ services }
         />
     </section>
 </section>
 <FeaturedProjects
+    CDN={ CDN }
     data={ home_data.projects }
+    PROJECT={ PROJECT }
     projects={ projects }
 />
 <InTheNews
+    CDN={ CDN }
     data={ home_data.in_the_news }
     news={ news }
+    PROJECT={ PROJECT }
 />
 <Clients
+    CDN={ CDN }
     clients={ home_data.clients }
     highlights={ highlights }
+    PROJECT={ PROJECT }
     testimonials={ testimonials }
 />
 <Industries
@@ -58,5 +70,9 @@ const {
     industries={ industries }
     PROJECT={ PROJECT }
 />
-<ScopeMyProject data={ home_data.scope_my_project } />
+<ScopeMyProject
+    CDN={ CDN }
+    data={ home_data.scope_my_project }
+    PROJECT={ PROJECT }
+/>
 <Footer />

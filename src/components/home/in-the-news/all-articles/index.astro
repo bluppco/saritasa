@@ -1,10 +1,16 @@
 ---
 
 // IMPORTS ASTRO COMPONENTS
-import Article from "./article/index.astro"
+import Article from "@/components/home/in-the-news/all-articles/article/index.astro"
 
 // GET ASTRO PROPS
-const { data } = Astro.props
+const {
+
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
 
 ---
 <div class="grid grid-cols-2 gap-x-14 gap-y-8 p-16 bg-white rounded-3xl shadow-xl border border-zinc-200">
@@ -15,7 +21,9 @@ const { data } = Astro.props
             return(
                 <Article
                     alternative_text={ value.title }
+                    CDN={ CDN }
                     href=""
+                    PROJECT={ PROJECT }
                     source={ value.cover }
                     title={ value.title }
                 />

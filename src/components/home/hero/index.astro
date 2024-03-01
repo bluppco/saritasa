@@ -1,4 +1,5 @@
 ---
+
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
@@ -6,11 +7,19 @@ import Container from "@/layouts/container/index.astro"
 import CeoMessage from "@/components/home/hero/ceo-message/index.jsx"
 
 // IMPORTS ASTRO ATOMS
-import ContainPicture from "@/atoms/picture/contain/index.astro"
 import HeadingOne from "@/atoms/headings/one/index.astro"
+import PictureContain from "@/atoms/picture/contain/index.astro"
 import PrimaryButton from "@/atoms/buttons/primary/index.astro"
 
-const { data } = Astro.props
+// GET ASTRO PROPS
+const {
+
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
+
 ---
 <section class="bg-saritasa_dark_blue h-screen 2xl:h-[900px] py-60">
     <Container>
@@ -28,10 +37,12 @@ const { data } = Astro.props
             </section>
             <section class="flex justify-end">
                 <div class="w-[480px] aspect-square">
-                    <ContainPicture
-                        source={ data.cover }
+                    <PictureContain
                         alternative_text="number 1 development firm"
+                        CDN={ CDN }
                         image_width="400"
+                        PROJECT={ PROJECT }
+                        source={ data.cover }
                     />
                 </div>
             </section>
