@@ -1,12 +1,19 @@
 ---
+
 // IMPORT ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import Service from "./service/index.astro"
-import OurServices from "./our-services/index.astro"
+import Service from "@/components/home/services/service/index.astro"
+import OurServices from "@/components/home/services/our-services/index.astro"
 
-const { data, services } = Astro.props
+const {
+
+    data,
+    services
+
+} = Astro.props
+
 ---
 <section class="absolute -bottom-96 2xl:-bottom-[480px] flex justify-center w-full">
     <Container>
@@ -22,9 +29,9 @@ const { data, services } = Astro.props
 
                             return(
                                 <Service
-                                    src={ value.cover }
-                                    alt={ value.name }
+                                    alternative_text={ value.name }
                                     href=""
+                                    source={ value.cover }
                                     title={ value.name }
                                 />
                             )

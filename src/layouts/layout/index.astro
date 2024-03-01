@@ -1,11 +1,13 @@
 ---
+
+// GET ASTRO PROPS
 const {
 
+    CDN,
     description,
     image,
-    title,
-    CDN_LINK,
     PROJECT,
+    title,
     WEBSITE
 
 } = Astro.props
@@ -28,13 +30,13 @@ import "@/styles/globals.css"
         <meta property="og:url" content={ WEBSITE } />
         <meta property="og:title" content={ title } />
         <meta property="og:description" content={ description } />
-        <meta property="og:image" content={ CDN_LINK + PROJECT + "/" + image } />
+        <meta property="og:image" content={ CDN + PROJECT + "/" + image } />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={ WEBSITE } />
         <meta property="twitter:title" content={ title } />
         <meta property="twitter:description" content={ description } />
-        <meta property="twitter:image" content={ CDN_LINK + PROJECT + "/" + image } />
-        <meta property="twitter:image" content={ CDN_LINK + PROJECT + "/" + image } />
+        <meta property="twitter:image" content={ CDN + PROJECT + "/" + image } />
+        <meta property="twitter:image" content={ CDN + PROJECT + "/" + image } />
         <link rel="icon" type="image/x-icon" href="/s_favicon.png">
     </head>
     <body class="relative after:bg-[url('/background.png')] after:bg-[length:60px] after:absolute after:w-full after:h-full after:top-0 after:opacity-40 after:-z-10">

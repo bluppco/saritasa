@@ -1,11 +1,14 @@
 ---
+
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import HighlightsCard from "./card/index.astro"
+import HighlightsCard from "@/components/home/clients/highlights/card/index.astro"
 
+// GET ASTRO PROPS
 const { data } = Astro.props
+
 ---
 <section class="absolute -bottom-44 w-full">
     <Container>
@@ -18,8 +21,8 @@ const { data } = Astro.props
                         <HighlightsCard
                             title={ value.title }
                             statistics={ value.statistics }
-                            src={ value.cover }
-                            alt={ value.title }
+                            source={ value.cover }
+                            alternative_text={ value.title }
                         />
                     )
 

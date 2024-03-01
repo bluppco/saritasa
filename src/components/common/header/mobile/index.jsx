@@ -4,11 +4,10 @@ import { motion, AnimatePresence } from "framer-motion"
 // IMPORTS REACT
 import { useState } from "react"
 
-// IMPORTS COMPONENTS
-import Li from "./li/index.jsx"
-
 // IMPORTS ATOMS
 import Link from "@/atoms/links/jsx/index.jsx"
+import ListItem from "@/atoms/header/mobile/list-item/index.jsx"
+import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
 
 const MobileHeader = () => {
 
@@ -19,10 +18,9 @@ const MobileHeader = () => {
             <div className="flex justify-between items-center z-20">
                 <Link href="/" aria_label="">
                     <div className="w-28 aspect-video">
-                        <img
-                            src="/logo/saritasa-logo.svg"
-                            alt="logo"
-                            className="w-28 aspect-video"
+                        <PictureInternalContain
+                            alternative_text="logo"
+                            source="/logo/saritasa-logo.svg"
                         />
                     </div>
                 </Link>
@@ -30,18 +28,18 @@ const MobileHeader = () => {
                     {
 
                         isOpen &&
-                        <img
-                            src="/icons/close.svg"
-                            className="w-6 aspect-square"
+                        <PictureInternalContain
+                            alternative_text="close icon"
+                            source="/icons/close.svg"
                         />
 
                     }
                     {
 
                         !isOpen &&
-                        <img
-                            src="/icons/menu.svg"
-                            className="w-6 aspect-square"
+                        <PictureInternalContain
+                            alternative_text="menu icon"
+                            source="/icons/menu.svg"
                         />
 
                     }
@@ -64,15 +62,13 @@ const MobileHeader = () => {
                     >
                         <div className="flex flex-col gap-1 items-center justify-center h-full z-10">
                             <ul className="flex flex-col gap-8">
-                                <Li>Home</Li>
-                                <Li>Portfolio</Li>
-                                <Li>Services</Li>
-                                <Li>Technologies</Li>
-                                <Li>Resources</Li>
-                                <Li>About Us</Li>
+                                <ListItem>Home</ListItem>
+                                <ListItem>Portfolio</ListItem>
+                                <ListItem>Services</ListItem>
+                                <ListItem>Technologies</ListItem>
+                                <ListItem>Resources</ListItem>
+                                <ListItem>About Us</ListItem>
                             </ul>
-                            <div>
-                            </div>
                         </div>
                     </motion.div>
 

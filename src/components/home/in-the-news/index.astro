@@ -1,15 +1,23 @@
 ---
+
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import AllArticles from "@/components/home/in-the-news/all-articles/index.astro"
+import ClutchRanking from "@/components/home/in-the-news/clutch-ranking/index.astro"
 
 // IMPORTS ASTRO ATOMS
 import HeadingTwoCenter from "@/atoms/headings/two/center/index.astro"
 
-// IMPORTS ASTRO COMPONENTS
-import AllArticles from "./all-articles/index.astro"
-import ClutchRanking from "./clutch-ranking/index.astro"
+// GET ASTRO PROPS
+const {
 
-const { data, news } = Astro.props
+    data,
+    news
+
+} = Astro.props
+
 ---
 <Container>
     <section class="space-y-8 py-16">

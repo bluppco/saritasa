@@ -1,9 +1,13 @@
+// IMPORTS ATOMS
+import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
+
 // IMPORTS REACT RESPONSIVE CAROUSEL
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
 
 const Testimonials = ( props ) => {
 
+    // GET PROPS
     const { data } = props
 
     return (
@@ -16,10 +20,9 @@ const Testimonials = ( props ) => {
                             <div key={ "testimonial-" + index } className="relative w-full flex flex-col gap-6 justify-center items-center bg-gradient-to-tr from-saritasa_orange to-saritasa_light_orange h-full p-4">
                                 <div className="border border-white rounded-full p-3 w-fit mb-2">
                                     <div className="w-6 aspect-square">
-                                        <img
-                                            src="/icons/quote.svg"
-                                            alt=""
-                                            className="w-6 aspect-square"
+                                        <PictureInternalContain
+                                            alternative_text="quote"
+                                            source="/icons/quote.svg"
                                         />
                                     </div>
                                 </div>

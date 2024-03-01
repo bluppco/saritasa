@@ -1,11 +1,18 @@
 ---
+
+// IMPORTS ASTRO COMPONENTS
+import Project from "@/components/home/featured-projects/project/index.astro"
+
 // IMPORTS ASTRO ATOMS
 import HeadingTwoCenter from "@/atoms/headings/two/center/index.astro"
 
-// IMPORTS ASTRO COMPONENTS
-import Project from "./project/index.astro"
+const {
 
-const { data, projects } = Astro.props
+    data,
+    projects
+
+} = Astro.props
+
 ---
 <section class="pt-[440px] 2xl:pt-[540px] space-y-8">
     <HeadingTwoCenter>{ data.title }</HeadingTwoCenter>
@@ -16,8 +23,8 @@ const { data, projects } = Astro.props
 
                 return(
                     <Project
-                        src={ value.cover }
-                        alt={ value.title }
+                        source={ value.cover }
+                        alternative_text={ value.title }
                         title={ value.title }
                         category={ value.category }
                     />

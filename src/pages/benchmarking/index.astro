@@ -1,31 +1,34 @@
 ---
+
+// RUNTIME
 const runtime = Astro.locals.runtime;
-const env = runtime.env.ENVIRONMENT
+const ENVIRONMENT = runtime.env.ENVIRONMENT
+
+// IMPORTS ASTRO LAYOUTS
+import Layout from "@/layouts/layout/index.astro"
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import Footer from "@/components/common/footer/index.astro"
+import Header from "@/components/common/header/jsx/index.jsx"
+import HeaderBanner from "@/components/home/header-banner/index.astro"
+import BenchmarkingJSX from "@/components/benchmarking"
 
 // IMPORTS BENCHMARKING FROM MD
 import { frontmatter as benchmarking } from "@/content/benchmarking/home.mdx"
 
-// IMPORTS LAYOUTS
-import Layout from "@/layouts/layout/index.astro"
-import Container from "@/layouts/container/index.astro"
-
-// IMPORTS COMPONENTS
-import Footer from "@/components/common/footer/index.astro"
-import Header from "@/components/common/header/index.jsx"
-import HeaderBanner from "@/components/home/header-banner/index.astro"
-import BenchmarkingJSX from "@/components/benchmarking"
 ---
 <Layout
 	title={ "Benchmarking" }
 	description={ "Benchmarking" }
 	image=""
 >
-    <HeaderBanner />
-    <Header environment={ env } />
+    <HeaderBanner ENVIRONMENT={ ENVIRONMENT } />
+    <Header ENVIRONMENT={ ENVIRONMENT } />
     <section class="py-40 bg-white">
         <Container>
             <BenchmarkingJSX
-                client:load
+                client:only
                 data={ benchmarking }
             />
         </Container>

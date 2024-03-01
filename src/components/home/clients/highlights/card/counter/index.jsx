@@ -1,9 +1,18 @@
+// IMPORTS REACT
 import { useState, useEffect, useRef } from "react"
+
+// IMPORTS FRAMER MOTION
 import { useInView, useAnimation } from "framer-motion"
 
 const Counter = ( props ) => {
 
-    const { statistics, title } = props
+    // GET PROPS
+    const {
+
+        statistics,
+        title
+
+    } = props
 
     const [ count, setCount ] = useState(1)
     const ref = useRef()

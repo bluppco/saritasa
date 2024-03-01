@@ -1,14 +1,15 @@
-// IMPORTING ATOMS
-import Button from "@/atoms/buttons/transparent/onclick/index.jsx"
-
-// IMPORTING COMPONENTS
+// IMPORTS COMPONENTS
 import VideoModal from "@/components/common/modal/video/index.jsx"
 
-// IMPORTING REACT
+// IMPORTS ATOMS
+import Button from "@/atoms/buttons/transparent/onclick/index.jsx"
+
+// IMPORTS REACT
 import React from "react"
 
 const CeoMessage = ( props ) => {
 
+    // GET PROPS
     const { button_text } = props
 
     const [ state, updateState ] = React.useState({

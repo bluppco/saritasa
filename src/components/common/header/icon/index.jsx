@@ -1,15 +1,17 @@
 // IMPORTS ATOMS
 import Link from "@/atoms/links/jsx/index.jsx"
+import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
 
 const HeaderIcon = ( props ) => {
 
+    // GET PROPS
     const {
 
-        src,
-        alt,
-        text,
+        alternative_text,
+        aria_label,
         href,
-        aria_label
+        source,
+        text
 
     } = props
 
@@ -17,10 +19,9 @@ const HeaderIcon = ( props ) => {
         <Link href={ href } aria_label={ aria_label }>
             <div className="flex flex-col gap-2 items-center">
                 <div className="w-8 aspect-square">
-                    <img
-                        src={ src }
-                        alt={ alt }
-                        className="w-8 aspect-square"
+                    <PictureInternalContain
+                        source={ source }
+                        alternative_text={ alternative_text }
                     />
                 </div>
                 <p className="font-avenir font-semibold text-saritasa_primary text-xs uppercase">{ text }</p>

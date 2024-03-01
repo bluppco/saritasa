@@ -1,22 +1,27 @@
 ---
-// IMPORTS ASTRO COMPONENTS
-import Testimonials from "./testimonials"
-import ClientsLogo from "./clients-logo/index.astro"
-import Highlights from "./highlights/index.astro"
 
+// IMPORTS ASTRO COMPONENTS
+import ClientsLogo from "@/components/home/clients/clients-logo/index.astro"
+import Highlights from "@/components/home/clients/highlights/index.astro"
+
+// IMPORTS JSX COMPONENTS
+import Testimonials from "@/components/home/clients/testimonials/index.jsx"
+
+// GET ASTRO PROPS
 const {
 
-    testimonials,
     clients,
-    highlights
+    highlights,
+    testimonials
 
 } = Astro.props
+
 ---
 <section class="relative h-full">
     <section class="grid grid-cols-3 h-full">
         <Testimonials
+            client:only
             data={ testimonials }
-            client:load
         />
         <section class="col-span-2">
             <ClientsLogo data={ clients } />

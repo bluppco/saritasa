@@ -1,8 +1,16 @@
 ---
+
 // IMPORT ASTRO ATOMS
 import HeadingTwoBlue from "@/atoms/headings/two/blue/index.astro"
 
-const { data, title } = Astro.props
+// GET ASTRO PROPS
+const {
+
+    data,
+    title
+
+} = Astro.props
+
 ---
 <section class="space-y-6 py-20 px-32 bg-white">
     <HeadingTwoBlue>{ title }</HeadingTwoBlue>

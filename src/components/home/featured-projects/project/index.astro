@@ -1,22 +1,25 @@
 ---
+
 // IMPORTS ASTRO ATOMS
 import Picture from "@/atoms/picture/index.astro"
 
+// GET ASTRO PROPS
 const {
 
-    src,
-    alt,
-    title,
-    category
+    alternative_text,
+    category,
+    source,
+    title
 
 } = Astro.props
+
 ---
 <div class="relative group cursor-pointer">
     <div class="w-full aspect-square bg-zinc-200">
         <Picture
-            src={ src }
-            alt={ alt }
+            alternative_text={ alternative_text }
             image_width="540"
+            source={ source }
         />
     </div>
     <div class="flex items-center justify-center w-full h-full absolute top-0">

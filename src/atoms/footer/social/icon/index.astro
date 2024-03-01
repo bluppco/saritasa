@@ -1,11 +1,19 @@
 ---
-const { src, alt } = Astro.props
+
+// GET ASTRO PROPS
+const {
+
+    alternative_text,
+    source
+
+} = Astro.props
+
 ---
 <div class="border rounded-full p-2">
     <div class="w-6 aspect-square">
         <img
-            src={ src }
-            alt={ alt }
+            src={ source }
+            alt={ alternative_text }
             class="w-6 aspect-square"
         />
     </div>
