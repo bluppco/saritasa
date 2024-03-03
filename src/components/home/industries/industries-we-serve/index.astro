@@ -17,10 +17,10 @@ const {
     <div class="grid md:grid-cols-2 gap-x-10">
         {
 
-            data.map( ( value ) => {
+            data.map( ( value, index ) => {
 
                 return(
-                    <div class="hover:shadow-2xl hover:shadow-zinc-200 hover:bg-white p-2 cursor-pointer">
+                    <div class={` ${ index < 2 ? "box-shadow hover:bg-white cursor-pointer" : "" }  p-2`}>
                         <p class="text-2xl font-avenir">-  { value.name }</p>
                     </div>
                 )
