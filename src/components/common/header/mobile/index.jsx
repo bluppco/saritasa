@@ -14,7 +14,7 @@ const MobileHeader = () => {
     const [ isOpen, updateOpen ] = useState( false )
 
     return (
-        <header className="fixed top-14 md:hidden px-4 z-20 w-full bg-white">
+        <header className="fixed top-14 md:hidden px-4 z-50 w-full bg-white">
             <div className="flex justify-between items-center z-20">
                 <Link href="/" aria_label="logo">
                     <div className="w-28 aspect-video">
