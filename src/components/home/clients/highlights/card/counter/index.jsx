@@ -46,7 +46,7 @@ const Counter = ( props ) => {
     }, [ isInView ])
 
     return(
-        <p className="text-5xl text-saritasa_primary font-avenir font-semibold text-center" ref={ ref }>
+        <p className="text-3xl md:text-5xl text-saritasa_primary font-avenir font-semibold text-center" ref={ ref }>
             { count }
             {
 

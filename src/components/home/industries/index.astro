@@ -16,11 +16,11 @@ const {
 } = Astro.props
 
 ---
-<section class="grid grid-cols-2 border-t border-saritasa_primary mt-60">
+<section class="grid md:grid-cols-2 border-t border-saritasa_primary mt-60">
     <section class="flex items-center justify-center bg-zinc-200 bg-no-repeat bg-cover" style=`background-image: url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })`>
-        <div class="bg-white/70 rounded-full p-8 grid grid-cols-4 gap-4 w-fit">
+        <div class="bg-white/70 rounded-full p-8 grid md:grid-cols-4 gap-4 w-fit">
             <PlayCeoVideo client:load />
-            <div class="col-span-3 flex flex-col justify-center">
+            <div class="md:col-span-3 flex flex-col justify-center">
                 <p class="text-saritasa_primary text-4xl font-avenir">{ data.title }</p>
                 <p class="text-saritasa_primary text-2xl font-avenir">{ data.description }</p>
             </div>

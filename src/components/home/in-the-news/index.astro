@@ -24,7 +24,7 @@ const {
 <Container>
     <section class="space-y-8 py-16">
         <HeadingTwoCenter>{ data.section }</HeadingTwoCenter>
-        <section class="grid grid-cols-3 gap-6">
+        <section class="grid md:grid-cols-3 gap-6">
             <section>
                 <ClutchRanking
                     CDN={ CDN }
@@ -32,7 +32,7 @@ const {
                     PROJECT={ PROJECT }
                 />
             </section>
-            <section class="col-span-2">
+            <section class="md:col-span-2">
                 <AllArticles
                     CDN={ CDN }
                     data={ news }

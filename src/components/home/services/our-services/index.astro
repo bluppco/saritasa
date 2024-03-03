@@ -8,10 +8,10 @@ import HeadingTwoWhite from "@/atoms/headings/two/white/index.astro"
 const { data } = Astro.props
 
 ---
-<div class="bg-saritasa_teal_blue p-10 rounded-3xl shadow-xl space-y-4">
+<div class="bg-saritasa_teal_blue p-6 md:p-10 rounded-3xl shadow-xl space-y-4">
     <div class="space-y-6">
         <HeadingTwoWhite>{ data.title }</HeadingTwoWhite>
-        <p class="text-2xl font-avenir text-white">{ data.description }</p>
+        <p class="text-xl md:text-2xl font-avenir text-white">{ data.description }</p>
     </div>
     <ButtonWhite>{ data.button_one_text }</ButtonWhite>
 </div>

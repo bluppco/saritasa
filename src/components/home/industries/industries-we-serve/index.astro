@@ -12,9 +12,9 @@ const {
 } = Astro.props
 
 ---
-<section class="space-y-6 py-20 px-32 bg-white">
+<section class="space-y-6 py-20 md:px-32 bg-white">
     <HeadingTwoBlue>{ title }</HeadingTwoBlue>
-    <div class="grid grid-cols-2 gap-x-10">
+    <div class="grid md:grid-cols-2 gap-x-10">
         {
 
             data.map( ( value ) => {
