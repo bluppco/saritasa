@@ -1,0 +1,39 @@
+---
+
+// IMPORTS ASTRO COMPONENTS
+import Counter from "@/components/home/clients/highlights/card/counter/index.jsx"
+
+// IMPORTS ASTRO ATOMS
+import PictureContain from "@/atoms/picture/contain/index.astro"
+
+const {
+
+    alternative_text,
+    CDN,
+    PROJECT,
+    source,
+    statistics,
+    title
+
+} = Astro.props
+
+---
+<div class="flex flex-col gap-4 justify-center items-center">
+    <div class="w-12 aspect-square">
+        <PictureContain
+            alternative_text={ alternative_text }
+            CDN={ CDN }
+            image_width="50"
+            PROJECT={ PROJECT }
+            source={ source }
+        />
+    </div>
+    <Counter
+        client:load
+        statistics={ statistics }
+        title={ title }
+    />
+    <div>
+        <p class="md:text-lg text-saritasa_primary font-avenir font-semibold text-center">{ title }</p>
+    </div>
+</div>

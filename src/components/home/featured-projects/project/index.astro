@@ -1,39 +1,50 @@
 ---
+
 // IMPORTS ASTRO ATOMS
 import Picture from "@/atoms/picture/index.astro"
+import Link from "@/atoms/links/index.astro"
 
+// GET ASTRO PROPS
 const {
 
-    src,
-    alt,
-    title,
-    category
+    alternative_text,
+    category,
+    CDN,
+    href,
+    PROJECT,
+    source,
+    title
 
 } = Astro.props
+
 ---
 <div class="relative group cursor-pointer">
-    <div class="w-full aspect-square bg-zinc-200">
-        <Picture
-            src={ src }
-            alt={ alt }
-            image_width="540"
-        />
-    </div>
-    <div class="flex items-center justify-center w-full h-full absolute top-0">
-        <div class="hidden group-hover:flex flex-col justify-center space-y-6 h-full w-full p-10 relative z-10 group-hover:z-10 group-hover:border group-hover:border-saritasa_primary">
-            <p class="text-4xl text-white font-semibold font-avenir">{ title }</p>
-            {
-
-                category.map( ( value ) => {
-
-                    return(
-                        <p class="text-xl text-white font-semibold font-avenir">{ value }</p>
-                    )
-
-                })
-
-            }
+    <Link href={ "/portfolio/" + href } aria_label={ title }>
+        <div class="w-full aspect-square bg-zinc-200">
+            <Picture
+                alternative_text={ alternative_text }
+                CDN={ CDN }
+                image_width="540"
+                PROJECT={ PROJECT }
+                source={ source }
+            />
         </div>
-    </div>
-    <div class="hidden group-hover:block bg-saritasa_black/50 w-full h-full absolute top-0"></div>
+        <div class="flex items-center justify-center w-full h-full absolute top-0">
+            <div class="hidden group-hover:flex flex-col justify-center space-y-6 h-full w-full p-10 relative z-10 group-hover:z-10 group-hover:border group-hover:border-saritasa_primary">
+                <p class="text-4xl text-white font-semibold font-avenir">{ title }</p>
+                {
+
+                    category.map( ( value ) => {
+
+                        return(
+                            <p class="text-xl text-white font-semibold font-avenir">{ value }</p>
+                        )
+
+                    })
+
+                }
+            </div>
+        </div>
+        <div class="hidden group-hover:block bg-saritasa_black/50 w-full h-full absolute top-0"></div>
+    </Link>
 </div>

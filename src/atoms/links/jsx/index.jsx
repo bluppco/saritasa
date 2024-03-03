@@ -1,6 +1,12 @@
 const Link = ( props ) => {
 
-    const { href, aria_label } = props
+    // GET PROPS
+    const {
+
+        aria_label,
+        href
+
+    } = props
 
     return(
         <a href={ href } aria-label={ aria_label }>

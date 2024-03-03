@@ -1,4 +1,4 @@
-const Li = ( props ) => {
+const ListItem = ( props ) => {
 
     return(
         <li className="text-black text-center">
@@ -8,4 +8,4 @@ const Li = ( props ) => {
 
 }
 
-export default Li
+export default ListItem

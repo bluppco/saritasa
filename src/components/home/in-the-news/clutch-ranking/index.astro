@@ -1,22 +1,27 @@
 ---
-// IMPORT ASTRO ATOMS
+
+// IMPORTS ASTRO ATOMS
 import HeadingThreeOrangeCenter from "@/atoms/headings/three/orange/center/index.astro"
 import Link from "@/atoms/links/index.astro"
 import Picture from "@/atoms/picture/index.astro"
+import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
 
-// IMPORTS CONSTANTS
-import { CDN_LINK, IMAGE_QUALITY } from "@/constants/cdn"
+// GET ASTRO PROPS
+const {
 
-const { data } = Astro.props
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
 ---
 <div class="space-y-4">
     <div class="flex items-center gap-2">
-        <div class="bg-saritasa_primary h-[1px] w-full"></div>
+        <div class="bg-saritasa_primary h-[1px] w-full" />
         <div class="w-60 aspect-square">
-            <img
-                src="/award.svg"
-                alt=""
-                class="w-60 aspect-square"
+            <PictureInternalContain
+                alternative_text="award"
+                source="/award.svg"
             />
         </div>
         <div class="bg-saritasa_primary h-[1px] w-full"></div>
@@ -29,9 +34,11 @@ const { data } = Astro.props
         <Link href="/resources/saritasa-ranked-1-custom-software-developer-in-los-angeles-new-york/" aria_label="">
             <div class="w-full aspect-[4/1] px-20">
                 <Picture
-                    src={ data.cover }
-                    alt=""
+                    alternative_text="clutch ranking"
+                    CDN={ CDN }
                     image_width="280"
+                    PROJECT={ PROJECT }
+                    source={ data.cover }
                 />
             </div>
         </Link>

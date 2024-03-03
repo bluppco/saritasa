@@ -1,32 +1,36 @@
 ---
-const runtime = Astro.locals.runtime
-const CDN_LINK = runtime.env.CDN_LINK
-const PROJECT = runtime.env.PROJECT
 
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import HighlightsCounter from "./highlights-counter/index.jsx"
+import HighlightsCard from "@/components/home/clients/highlights/card/index.astro"
 
-const { data } = Astro.props
+// GET ASTRO PROPS
+const {
+
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
+
 ---
-<section class="absolute -bottom-44 w-full">
+<section class="-translate-y-8 w-full">
     <Container>
-        <section class="flex justify-between bg-white rounded-2xl shadow px-24 py-10">
+        <section class="flex flex-wrap md:flex-nowrap gap-4 justify-between bg-white rounded-2xl shadow px-4 md:px-24 py-4 md:py-10">
             {
 
                 data.map( ( value ) => {
 
                     return(
-                        <HighlightsCounter
-                            title={ value.title }
-                            statistics={ value.statistics }
-                            src={ value.cover }
-                            alt={ value.title }
-                            CDN_LINK={ CDN_LINK }
+                        <HighlightsCard
+                            alternative_text={ value.title }
+                            CDN={ CDN }
                             PROJECT={ PROJECT }
-                            client:load
+                            source={ value.cover }
+                            statistics={ value.statistics }
+                            title={ value.title }
                         />
                     )
 
