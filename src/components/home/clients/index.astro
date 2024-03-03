@@ -19,7 +19,7 @@ const {
 } = Astro.props
 
 ---
-<section class="relative h-full">
+<section class="relative h-full overflow-hidden">
     <section class="grid md:grid-cols-3 h-full">
         <Testimonials
             client:only
@@ -33,9 +33,5 @@ const {
             />
         </section>
     </section>
-    <Highlights
-        CDN={ CDN }
-        data={ highlights }
-        PROJECT={ PROJECT }
-    />
+
 </section>

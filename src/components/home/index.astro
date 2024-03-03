@@ -7,6 +7,7 @@ import Footer from "@/components/common/footer/index.astro"
 import Header from "@/components/common/header/jsx/index.jsx"
 import HeaderBanner from "@/components/home/header-banner/index.astro"
 import Hero from "@/components/home/hero/index.astro"
+import Highlights from "@/components/home/clients/highlights/index.astro"
 import Industries from "@/components/home/industries/index.astro"
 import InTheNews from "@/components/home/in-the-news/index.astro"
 import ScopeMyProject from "@/components/home/scope-my-project/index.astro"
@@ -63,6 +64,11 @@ const {
     highlights={ highlights }
     PROJECT={ PROJECT }
     testimonials={ testimonials }
+/>
+<Highlights
+    CDN={ CDN }
+    data={ highlights }
+    PROJECT={ PROJECT }
 />
 <Industries
     CDN={ CDN }
