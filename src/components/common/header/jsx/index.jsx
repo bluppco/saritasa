@@ -59,7 +59,7 @@ const Header = ( props ) => {
                                                                     source="/icons/arrow_down.svg"
                                                                 />
                                                             </div>
-                                                            <div className="opacity-0 group-hover:opacity-100 group-hover:flex-col absolute p-6 bg-white left-0 z-20 top-10 w-[460px] gap-2 shadow transition-all duration-0 delay-200">
+                                                            <div className="opacity-0 -z-10 group-hover:z-20 group-hover:opacity-100 group-hover:flex-col absolute p-6 bg-white left-0 top-10 w-[460px] gap-2 shadow transition-all duration-0 delay-200">
                                                                 <div className="grid grid-cols-2 gap-x-4">
                                                                     {
 
