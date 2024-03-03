@@ -39,7 +39,7 @@ const PlayCeoVideo = ( props ) => {
 
     return(
         <div className="px-2 md:px-0 w-fit" onClick={ () => openModal() }>
-            <div className="w-24 hover:scale-110 transition-all duration-500 aspect-square overflow-hidden">
+            <div className="w-16 md:w-24 hover:scale-110 transition-all duration-500 aspect-square overflow-hidden">
                 <PictureInternalContain
                     alternative_text="play"
                     source="/play.svg"

@@ -11,7 +11,7 @@ const Testimonials = ( props ) => {
     const { data } = props
 
     return (
-        <section className="w-full h-full relative">
+        <section className="w-full h-80 md:h-full relative">
             <Carousel showThumbs={ false } showStatus={ false } showArrows={ false } autoPlay={ true } infiniteLoop={ true } className="h-full">
                 {
 
@@ -26,8 +26,8 @@ const Testimonials = ( props ) => {
                                         />
                                     </div>
                                 </div>
-                                <p className="text-white font-avenir text-2xl text-center">{ value.description }</p>
-                                <p className="text-white font-avenir text-lg text-center">{ value.author }</p>
+                                <p className="text-white font-avenir text-xl md:text-2xl text-center">{ value.description }</p>
+                                <p className="text-white font-avenir md:text-lg text-center">{ value.author }</p>
                             </div>
                         )
                     })
