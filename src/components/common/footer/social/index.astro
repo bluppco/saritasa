@@ -1,27 +1,27 @@
 ---
-// IMPORTS ASTRO COMPONENTS
-import Icon from "./icon/index.astro"
 
 // IMPORTS ASTRO ATOMS
+import Icon from "@/atoms/footer/social/icon/index.astro"
 import Link from "@/atoms/links/target-blank/index.astro"
+
 ---
 <div class="flex gap-4 relative">
-    <Link href="http://www.facebook.com/SaritasaLLC" aria_label="">
+    <Link href="http://www.facebook.com/SaritasaLLC" aria_label="facebook logo">
         <Icon
-            src="/icons/facebook.svg"
-            alt=""
+            alternative_text="facebook logo"
+            source="/icons/facebook.svg"
         />
     </Link>
-    <Link href="https://www.linkedin.com/company/saritasa" aria_label="">
+    <Link href="https://www.linkedin.com/company/saritasa" aria_label="linkedin logo">
         <Icon
-            src="/icons/linkedin.svg"
-            alt=""
+            alternative_text="linkedin logo"
+            source="/icons/linkedin.svg"
         />
     </Link>
-    <Link href="https://www.youtube.com/user/SaritasaVideos" aria_label="">
+    <Link href="https://www.youtube.com/user/SaritasaVideos" aria_label="youtube logo">
         <Icon
-            src="/icons/youtube.svg"
-            alt=""
+            alternative_text="youtube logo"
+            source="/icons/youtube.svg"
         />
     </Link>
 </div>

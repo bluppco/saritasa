@@ -1,30 +1,42 @@
 ---
-// IMPORT ASTRO LAYOUTS
+
+// IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import Service from "./service/index.astro"
-import OurServices from "./our-services/index.astro"
+import Service from "@/components/home/services/service/index.astro"
+import OurServices from "@/components/home/services/our-services/index.astro"
 
-const { data, services } = Astro.props
+// GET ASTRO PROPS
+const {
+
+    CDN,
+    data,
+    PROJECT,
+    services
+
+} = Astro.props
+
 ---
-<section class="absolute -bottom-96 2xl:-bottom-[480px] flex justify-center w-full">
+<section class="hidden absolute md:-bottom-96 2xl:-bottom-[480px] md:flex justify-center w-full">
     <Container>
-        <section class="grid grid-cols-3 gap-8">
+        <section class="grid md:grid-cols-3 gap-8">
             <section>
                 <OurServices data={ data } />
             </section>
-            <section class="col-span-2">
-                <div class="grid grid-cols-2 gap-10 p-12 bg-white rounded-3xl shadow-xl">
+            <section class="md:col-span-2">
+                <div class="grid md:grid-cols-2 md:gap-10 p-4 md:p-12 bg-white rounded-3xl shadow-xl">
                     {
 
                         services.map( ( value ) => {
 
                             return(
                                 <Service
-                                    src={ value.cover }
-                                    alt={ value.name }
-                                    href=""
+                                    alternative_text={ value.name }
+                                    CDN={ CDN }
+                                    href={ value.slug }
+                                    PROJECT={ PROJECT }
+                                    source={ value.cover }
                                     title={ value.name }
                                 />
                             )

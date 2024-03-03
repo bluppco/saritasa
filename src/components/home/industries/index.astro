@@ -1,29 +1,35 @@
 ---
-// IMPORTS CONSTANTS
-import { CDN_LINK, IMAGE_QUALITY } from "@/constants/cdn"
 
 // IMPORTS ASTRO COMPONENTS
-import IndustriesWeServe from "./industries-we-serve/index.astro"
+import IndustriesWeServe from "@/components/home/industries/industries-we-serve/index.astro"
 
-const { data, industries } = Astro.props
+// IMPORTS JSX COMPONENTS
+import PlayCeoVideo from "@/components/home/industries/play-ceo-video/index.jsx"
+
+const {
+
+    CDN,
+    data,
+    industries,
+    PROJECT
+
+} = Astro.props
+
 ---
-<section class="grid grid-cols-2 border-t border-saritasa_primary mt-60">
-    <section class="flex items-center justify-center bg-zinc-200 bg-no-repeat bg-cover" style=`background-image: url(${ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY })`>
-        <div class="bg-white/70 rounded-full p-8 flex gap-4 w-fit">
-            <div class="w-20 aspect-square">
-                <img
-                    src="/play.svg"
-                    alt=""
-                    class="w-20 aspect-square"
-                />
-            </div>
-            <div>
-                <p class="text-saritasa_primary text-4xl font-avenir">{ data.title }</p>
-                <p class="text-saritasa_primary text-2xl font-avenir">{ data.description }</p>
+<section class="grid md:grid-cols-2 border-t border-saritasa_primary mt-4">
+    <section class="flex items-center justify-center bg-zinc-200 bg-no-repeat bg-cover h-80 md:h-full px-8" style=`background-image: url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })`>
+        <div class="bg-white/70 rounded-full p-4 md:p-8 grid grid-cols-4 gap-12 md:gap-4 w-fit">
+            <PlayCeoVideo client:load />
+            <div class="col-span-3 flex flex-col justify-center">
+                <p class="text-saritasa_primary text-2xl md:text-4xl font-avenir">{ data.title }</p>
+                <p class="text-saritasa_primary md:text-2xl font-avenir">{ data.description }</p>
             </div>
         </div>
     </section>
     <section>
-        <IndustriesWeServe data={ industries } title={ data.section } />
+        <IndustriesWeServe
+            data={ industries }
+            title={ data.section }
+        />
     </section>
 </section>

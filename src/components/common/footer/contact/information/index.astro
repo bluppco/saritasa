@@ -1,23 +1,26 @@
 ---
+
 // IMPORTS ASTRO ATOMS
 import Link from "@/atoms/links/index.astro"
+import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
 
+// GET ASTRO PROPS
 const {
 
-    title,
-    src,
-    alt,
+    alterntive_text,
+    aria_label,
     href,
-    aria_label
+    source,
+    title
 
 } = Astro.props
+
 ---
 <div class="flex gap-4 items-center">
     <div class="w-6 aspect-square">
-        <img
-            src={ src }
-            alt={ alt }
-            class="w-6 aspect-square"
+        <PictureInternalContain
+            alterntive_text={ alterntive_text }
+            source={ source }
         />
     </div>
     <Link href={ href } aria_label={ aria_label }>

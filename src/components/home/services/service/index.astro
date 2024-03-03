@@ -1,30 +1,33 @@
 ---
-// IMPORTS CONSTANTS
-import { CDN_LINK, IMAGE_QUALITY } from "@/constants/cdn"
 
 // IMPORTS ASTRO ATOMS
 import Link from "@/atoms/links/index.astro"
+import PictureContain from "@/atoms/picture/contain/index.astro"
 
 const {
 
-    src,
-    alt,
+    alternative_text,
+    CDN,
     href,
+    PROJECT,
+    source,
     title
 
 } = Astro.props
+
 ---
-<div class="hover:bg-white hover:shadow-lg hover:shadow-black/20 p-2 rounded">
-    <Link href={ href } aria_label="">
+<div class="hover:bg-white p-2 rounded box-shadow">
+    <Link href={ href } aria_label={ title }>
         <div class="flex gap-4 items-center">
             <div class="w-12 aspect-square">
-                <img
-                    src={ CDN_LINK + src + "?quality=" + IMAGE_QUALITY }
-                    alt={ alt }
-                    class="w-12 aspect-square"
+                <PictureContain
+                    alternative_text={ alternative_text }
+                    CDN={ CDN }
+                    PROJECT={ PROJECT }
+                    source={ source }
                 />
             </div>
-            <h3 class="font-avenir text-2xl">{ title }</h3>
+            <h3 class="font-avenir text-xl md:text-2xl">{ title }</h3>
         </div>
     </Link>
 </div>
