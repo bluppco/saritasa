@@ -11,13 +11,13 @@ const Testimonials = ( props ) => {
     const { data } = props
 
     return (
-        <section className="relative w-fit md:w-full h-80 md:h-full">
-            <Carousel showThumbs={ false } showStatus={ false } showArrows={ false } autoPlay={ true } infiniteLoop={ true } className="h-full">
+        <section className="relative w-screen md:w-full h-80 md:h-full">
+            <Carousel showThumbs={ false } showStatus={ false } showArrows={ false } autoPlay={ true } infiniteLoop={ true } className="h-full max-w-[100%]">
                 {
 
                     data.map(  ( value, index ) => {
                         return (
-                            <div key={ "testimonial-" + index } className="relative w-full flex flex-col gap-6 justify-center items-center bg-gradient-to-tr from-saritasa_orange to-saritasa_light_orange h-full p-4">
+                            <div key={ "testimonial-" + index } className="relative flex flex-col gap-6 justify-center items-center bg-gradient-to-tr from-saritasa_orange to-saritasa_light_orange h-full p-4 w-full">
                                 <div className="border border-white rounded-full p-3 w-fit mb-2">
                                     <div className="w-6 aspect-square">
                                         <PictureInternalContain

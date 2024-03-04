@@ -20,6 +20,11 @@
 .control-dots{
     bottom: 56px !important;
 }
+@media only screen and (max-width: 768px) {
+    .control-dots {
+        bottom: 0px !important;
+    }
+}
 .control-dots .dot{
     width: 10px !important;
     height: 10px !important;
