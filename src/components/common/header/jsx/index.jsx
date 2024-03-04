@@ -59,14 +59,14 @@ const Header = ( props ) => {
                                                                     source="/icons/arrow_down.svg"
                                                                 />
                                                             </div>
-                                                            <div className="opacity-0 -z-10 group-hover:z-20 group-hover:opacity-100 group-hover:flex-col absolute p-6 bg-white left-0 top-10 w-[460px] gap-2 shadow transition-all duration-0 delay-200">
+                                                            <div className="invisible opacity-0 -z-10 group-hover:z-20 group-hover:opacity-100 group-hover:visible flex-col absolute p-6 bg-white left-0 top-10 w-[460px] gap-2 shadow transition-all duration-0 delay-200">
                                                                 <div className="grid grid-cols-2 gap-x-4">
                                                                     {
 
                                                                         item.data.items.map( ( sub_item, sub_item_index ) => {
 
                                                                             return(
-                                                                                <div className="py-1">
+                                                                                <div className="py-1" key={ sub_item_index }>
                                                                                     <a
                                                                                         aria-label={ "explore" + sub_item.title }
                                                                                         className="text-slate-700 hover:text-saritasa_black hover:underline"
@@ -105,7 +105,6 @@ const Header = ( props ) => {
                                 <HeaderIcon
                                     alternative_text="Scope My Project"
                                     aria_label="scope my project"
-                                    href=""
                                     source="/icons/orange_project.svg"
                                     text="Scope My Project"
                                 />

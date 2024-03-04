@@ -32,20 +32,18 @@ const {
 <section class="md:h-screen 2xl:h-[720px] md:max-h-screen">
     <HeaderBanner ENVIRONMENT={ ENVIRONMENT } />
     <Header ENVIRONMENT={ ENVIRONMENT } />
-    <section class="relative w-full h-full md:mt-32">
-        <Hero
-            CDN={ CDN }
-            data={ home_data.hero }
-            PROJECT={ PROJECT }
-        />
-        <Services
-            CDN={ CDN }
-            data={ home_data.services }
-            PROJECT={ PROJECT }
-            services={ services }
-        />
-    </section>
+    <Hero
+        CDN={ CDN }
+        data={ home_data.hero }
+        PROJECT={ PROJECT }
+    />
 </section>
+<Services
+    CDN={ CDN }
+    data={ home_data.services }
+    PROJECT={ PROJECT }
+    services={ services }
+/>
 <FeaturedProjects
     CDN={ CDN }
     data={ home_data.projects }

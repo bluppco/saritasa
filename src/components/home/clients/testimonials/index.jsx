@@ -11,7 +11,7 @@ const Testimonials = ( props ) => {
     const { data } = props
 
     return (
-        <section className="w-full h-80 md:h-full relative">
+        <section className="relative w-fit md:w-full h-80 md:h-full">
             <Carousel showThumbs={ false } showStatus={ false } showArrows={ false } autoPlay={ true } infiniteLoop={ true } className="h-full">
                 {
 
