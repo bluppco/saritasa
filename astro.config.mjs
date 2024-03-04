@@ -13,6 +13,9 @@ export default defineConfig({
 		react()],
 	output: "server",
 	adapter: cloudflare({
+		routes: {
+			exclude: ["/icons/*", "/fonts/*"]
+		},
 		runtime: {
 			mode: 'local',
 			type: 'pages'
