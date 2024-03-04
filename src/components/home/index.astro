@@ -4,7 +4,7 @@
 import Clients from "@/components/home/clients/index.astro"
 import FeaturedProjects from "@/components/home/featured-projects/index.astro"
 import Footer from "@/components/common/footer/index.astro"
-import Header from "@/components/common/header/jsx/index.jsx"
+import Header from "@/components/common/header/index.astro"
 import HeaderBanner from "@/components/home/header-banner/index.astro"
 import Hero from "@/components/home/hero/index.astro"
 import Highlights from "@/components/home/clients/highlights/index.astro"
@@ -68,15 +68,17 @@ const {
     data={ highlights }
     PROJECT={ PROJECT }
 />
-<Industries
-    CDN={ CDN }
-    data={ home_data.industries_we_serve }
-    industries={ industries }
-    PROJECT={ PROJECT }
-/>
-<ScopeMyProject
-    CDN={ CDN }
-    data={ home_data.scope_my_project }
-    PROJECT={ PROJECT }
-/>
+<section class="relative h-full bg-white">
+    <Industries
+        CDN={ CDN }
+        data={ home_data.industries_we_serve }
+        industries={ industries }
+        PROJECT={ PROJECT }
+    />
+    <ScopeMyProject
+        CDN={ CDN }
+        data={ home_data.scope_my_project }
+        PROJECT={ PROJECT }
+    />
+</section>
 <Footer />
