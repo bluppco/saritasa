@@ -11,15 +11,14 @@ const {
 
     CDN,
     clients,
-    highlights,
     PROJECT,
     testimonials
 
 } = Astro.props
 
 ---
-<section class="relative h-full overflow-hidden">
-    <section class="grid md:grid-cols-3 h-full">
+<section class="relative h-full w-fit md:w-full overflow-hidden">
+    <section class="grid md:grid-cols-3 h-full w-fit md:w-full">
         <Testimonials
             client:only
             data={ testimonials }
