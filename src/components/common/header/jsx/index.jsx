@@ -113,7 +113,7 @@ const Header = ( props ) => {
                     </nav>
                 </Container>
             </header>
-            <MobileHeader />
+            <MobileHeader header_data={ header_data } />
         </>
     )
 
