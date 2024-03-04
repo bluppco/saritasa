@@ -68,15 +68,17 @@ const {
     data={ highlights }
     PROJECT={ PROJECT }
 />
-<Industries
-    CDN={ CDN }
-    data={ home_data.industries_we_serve }
-    industries={ industries }
-    PROJECT={ PROJECT }
-/>
-<ScopeMyProject
-    CDN={ CDN }
-    data={ home_data.scope_my_project }
-    PROJECT={ PROJECT }
-/>
+<section class="relative h-full bg-white">
+    <Industries
+        CDN={ CDN }
+        data={ home_data.industries_we_serve }
+        industries={ industries }
+        PROJECT={ PROJECT }
+    />
+    <ScopeMyProject
+        CDN={ CDN }
+        data={ home_data.scope_my_project }
+        PROJECT={ PROJECT }
+    />
+</section>
 <Footer />
