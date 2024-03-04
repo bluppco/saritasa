@@ -42,7 +42,7 @@ const PlayCeoVideo = ( props ) => {
             <div className="w-16 md:w-24 hover:scale-110 transition-all duration-500 aspect-square overflow-hidden">
                 <PictureInternalContain
                     alternative_text="play"
-                    source="/play.svg"
+                    source="/icons/play-video.svg"
                 />
             </div>
             <VideoModal open={ state.open_modal } value={ state.value } close={ () => closeModal() } />
