@@ -6,22 +6,28 @@ import Link from "@/atoms/links/target-blank/index.astro"
 
 ---
 <div class="flex gap-4 relative">
-    <Link href="http://www.facebook.com/SaritasaLLC" aria_label="facebook logo">
-        <Icon
-            alternative_text="facebook logo"
-            source="/icons/facebook.svg"
-        />
-    </Link>
-    <Link href="https://www.linkedin.com/company/saritasa" aria_label="linkedin logo">
-        <Icon
-            alternative_text="linkedin logo"
-            source="/icons/linkedin.svg"
-        />
-    </Link>
-    <Link href="https://www.youtube.com/user/SaritasaVideos" aria_label="youtube logo">
-        <Icon
-            alternative_text="youtube logo"
-            source="/icons/youtube.svg"
-        />
-    </Link>
+    <div class="hover:-translate-y-1 duration-500">
+        <Link href="http://www.facebook.com/SaritasaLLC" aria_label="facebook logo">
+            <Icon
+                alternative_text="facebook logo"
+                source="/icons/facebook.svg"
+            />
+        </Link>
+    </div>
+    <div class="hover:-translate-y-1 duration-500">
+        <Link href="https://www.linkedin.com/company/saritasa" aria_label="linkedin logo">
+            <Icon
+                alternative_text="linkedin logo"
+                source="/icons/linkedin.svg"
+            />
+        </Link>
+    </div>
+    <div class="hover:-translate-y-1 duration-500">
+        <Link href="https://www.youtube.com/user/SaritasaVideos" aria_label="youtube logo">
+            <Icon
+                alternative_text="youtube logo"
+                source="/icons/youtube.svg"
+            />
+        </Link>
+    </div>
 </div>

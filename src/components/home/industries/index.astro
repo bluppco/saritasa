@@ -16,8 +16,8 @@ const {
 } = Astro.props
 
 ---
-<section class="grid md:grid-cols-2 border-t border-saritasa_primary mt-4 relative z-20 py-[360px] h-[800px]">
-    <section class="flex items-center justify-center bg-zinc-200 bg-no-repeat bg-cover h-80 md:h-full px-8" style=`background-image: url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })`>
+<section class="grid md:grid-cols-2 border-t border-saritasa_primary mt-4 relative pb-60 md:pb-[360px] md:h-[880px]">
+    <section class="flex items-center justify-center bg-zinc-200 bg-no-repeat bg-cover bg-center h-80 md:h-full px-8" style=`background-image: url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })`>
         <div class="bg-white/70 rounded-full p-4 md:p-8 grid grid-cols-4 gap-12 md:gap-4 w-fit">
             <PlayCeoVideo client:load />
             <div class="col-span-3 flex flex-col justify-center">
