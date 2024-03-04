@@ -66,7 +66,7 @@ const Header = ( props ) => {
                                                                         item.data.items.map( ( sub_item, sub_item_index ) => {
 
                                                                             return(
-                                                                                <div className="py-1">
+                                                                                <div className="py-1" key={ sub_item_index }>
                                                                                     <a
                                                                                         aria-label={ "explore" + sub_item.title }
                                                                                         className="text-slate-700 hover:text-saritasa_black hover:underline"
@@ -105,7 +105,6 @@ const Header = ( props ) => {
                                 <HeaderIcon
                                     alternative_text="Scope My Project"
                                     aria_label="scope my project"
-                                    href=""
                                     source="/icons/orange_project.svg"
                                     text="Scope My Project"
                                 />
