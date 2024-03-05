@@ -47,7 +47,7 @@ const Header = ( props ) => {
 
                                         return (
                                             <li className="group" key={ index } onClick={() => setActivePage( item.data.order )}>
-                                                <div className={` ${ activePage === item.data.order ? "border-saritasa_primary" : "border-transparent" } pb-1 border-b-2 text-base text-slate-500 font-avenir font-semibold uppercase flex items-center gap-2 relative group cursor-pointer`}>
+                                                <div className={` ${ activePage === item.data.order ? "border-transparent" : "border-transparent" } pb-1 border-b-2 text-base text-slate-500 font-avenir font-semibold uppercase flex items-center gap-2 relative group cursor-pointer`}>
                                                     <a href={ "/" + item.data.slug } className="group-hover:text-saritasa_black" aria_label={"explore " + item.data.title }>{ item.data.title }</a>
                                                     {
 
