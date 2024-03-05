@@ -14,7 +14,7 @@ export default defineConfig({
 	output: "server",
 	adapter: cloudflare({
 		routes: {
-			exclude: ["/icons/*", "/fonts/*", "/images/*" ]
+			exclude: ["/icons/*", "/fonts/*", "/images/*","/_astro/*","/logo/*" ]
 		},
 		runtime: {
 			mode: 'local',
