@@ -69,12 +69,13 @@ const HeaderMobile = ( props ) => {
                             <ul className="flex flex-col gap-8 items-center justify-center h-full z-10">
                                 {
 
-                                    header_data.map( ( value ) => {
+                                    header_data.map( ( value, index ) => {
 
                                         return(
-                                            <Link href={ value.data.slug } aria_label={ value.data.title }>
-                                                <li className="uppercase font-avenir">{ value.data.title }</li>
-                                            </Link>
+                                                <li className="uppercase font-avenir" key={ index }>
+                                                    <Link href={ value.data.slug } aria_label={ value.data.title }>{ value.data.title }</Link>
+                                                </li>
+
                                         )
 
                                     })
